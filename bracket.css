@@ -68,6 +68,7 @@
 }
 .tournament-bracket {
   border: 1px solid black;
+  overflow: auto;
 }
 .tournament-bracket .tb-game,
 .tournament-bracket .tb-empty-game {
