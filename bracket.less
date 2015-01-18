@@ -118,6 +118,12 @@
       width: @scoreWidth;
       margin-top: @scoreVpad;
       margin-bottom: @scoreVpad;
+      clear: both;
+      overflow: hidden;
+      .seat, .school, .score {
+        display: inline;
+        float: left;
+      }
     }
   }
   .tb-empty-game {
@@ -162,8 +168,6 @@
       }
 
       .school, .score {
-        display: inline;
-        float: left;
         background-image: linear-gradient(to bottom,
           #F6F7F8 0%,
           #E4E5E6 50%,

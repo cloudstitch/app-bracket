@@ -110,6 +110,14 @@
   width: 103px;
   margin-top: 3px;
   margin-bottom: 3px;
+  clear: both;
+  overflow: hidden;
+}
+.tournament-bracket .tb-game .tb-score .seat,
+.tournament-bracket .tb-game .tb-score .school,
+.tournament-bracket .tb-game .tb-score .score {
+  display: inline;
+  float: left;
 }
 /* THEMES */
 .tournament-bracket.dark {
@@ -135,8 +143,6 @@
 }
 .tournament-bracket.light .ladder .tb-score .school,
 .tournament-bracket.light .ladder .tb-score .score {
-  display: inline;
-  float: left;
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
 .tournament-bracket.light .ladder .championship {
