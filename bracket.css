@@ -106,7 +106,6 @@
   width: 103px;
 }
 .tournament-bracket .tb-game .tb-score {
-  background-color: red;
   height: 17px;
   width: 103px;
   margin-top: 3px;
@@ -116,11 +115,21 @@
 .tournament-bracket.dark {
   background-image: radial-gradient(#454441, #191919);
 }
+.tournament-bracket.dark .ladder .tb-score {
+  background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
+  border: 1px solid #E9EAEC;
+  border-radius: 6px;
+}
 .tournament-bracket.dark .ladder .championship {
   background-image: linear-gradient(45deg, #676767 67, #4e4e4e);
 }
 .tournament-bracket.light {
   background-image: radial-gradient(#f4f4f8, #ced6df);
+}
+.tournament-bracket.light .ladder .tb-score {
+  background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
+  border: 1px solid #E9EAEC;
+  border-radius: 6px;
 }
 .tournament-bracket.light .ladder .championship {
   background-image: linear-gradient(45deg, #5ac6db, #00b3ce);

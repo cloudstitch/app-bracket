@@ -114,7 +114,6 @@
   .tb-game {
 
     .tb-score {
-      background-color: red;
       height: @scoreHeight;
       width: @scoreWidth;
       margin-top: @scoreVpad;
@@ -132,6 +131,15 @@
   background-image: radial-gradient(#454441, #191919);
 
   .ladder {
+    .tb-score {
+      background-image: linear-gradient(to bottom,
+        #F6F7F8 0%,
+        #E4E5E6 50%,
+        #C9C9CB 100%
+      );
+      border: 1px solid #E9EAEC;
+      border-radius: ceil(@scoreHeight / 3);
+    }  
     .championship {
       background-image: linear-gradient(45deg, #67676767, #4E4E4E);
     }
@@ -142,6 +150,15 @@
   background-image: radial-gradient(#F4F4F8, #CED6DF);
 
   .ladder {
+    .tb-score {
+      background-image: linear-gradient(to bottom,
+        #F6F7F8 0%,
+        #E4E5E6 50%,
+        #C9C9CB 100%
+      );
+      border: 1px solid #E9EAEC;
+      border-radius: ceil(@scoreHeight / 3);
+    }
     .championship {
       background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
     }  
