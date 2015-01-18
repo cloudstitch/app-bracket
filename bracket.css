@@ -70,10 +70,14 @@
 .tournament-bracket {
   border: 1px solid black;
   overflow: auto;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 .tournament-bracket .ladder {
-  display: inline-block;
+  width: totalWidth;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   overflow: auto;
 }
 .tournament-bracket .tb-game,
@@ -99,4 +103,8 @@
   width: 103px;
   margin-top: 3px;
   margin-bottom: 3px;
+}
+/* THEMES */
+.tournament-bracket.dark {
+  background-image: radial-gradient(#454441, #191919);
 }
