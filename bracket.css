@@ -41,6 +41,7 @@
 }
 .tb-col-8 > div {
   margin-left: 20px;
+  margin-right: 5px;
 }
 .tb-col-1 {
   float: left;
@@ -68,6 +69,11 @@
 }
 .tournament-bracket {
   border: 1px solid black;
+  overflow: auto;
+  display: inline-block;
+}
+.tournament-bracket .ladder {
+  display: inline-block;
   overflow: auto;
 }
 .tournament-bracket .tb-game,

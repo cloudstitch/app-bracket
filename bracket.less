@@ -57,7 +57,7 @@
 .tb-col-5 > div { margin-left: @hpad4; }
 .tb-col-6 > div { margin-left: @hpad3; }
 .tb-col-7 > div { margin-left: @hpad2; }
-.tb-col-8 > div { margin-left: @hpad1; }
+.tb-col-8 > div { margin-left: @hpad1; margin-right: @hpad0; }
 
 .tb-col-1 { float: left; }
 .tb-col-2 { float: left; }
@@ -72,7 +72,13 @@
 .tournament-bracket {
   border: 1px solid black;
   overflow: auto;
-  
+  display: inline-block;
+
+  .ladder {
+    display: inline-block;
+    overflow: auto;
+  }
+
   .tb-game, .tb-empty-game {
     position: relative;
     width: 100%;
