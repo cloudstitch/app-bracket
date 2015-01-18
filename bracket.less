@@ -82,6 +82,15 @@
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
+    
+    .championship {
+      width: 2 * @gameWidth + @hpad4 + @hpad4 - @hpad3;
+      height: 2 * @gameHeight;
+      position: absolute;
+      bottom: @scoreVpad * 6;
+      left: @left4;
+      border: 1px solid #555;
+    }
   }
 
   .tb-game, .tb-empty-game {
@@ -125,4 +134,11 @@
 
 .tournament-bracket.light {
   background-image: radial-gradient(#F4F4F8, #CED6DF);
+
+  .ladder {
+    .championship {
+      background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
+    }  
+  }
+
 }
