@@ -113,11 +113,25 @@
   clear: both;
   overflow: hidden;
 }
+.tournament-bracket .tb-game .tb-score .seat {
+  float: left;
+  width: 25px;
+}
+.tournament-bracket .tb-game .tb-score .school {
+  float: left;
+  width: 51px;
+}
+.tournament-bracket .tb-game .tb-score .score {
+  float: left;
+  max-width: 24px;
+  text-align: right;
+}
 .tournament-bracket .tb-game .tb-score .seat,
 .tournament-bracket .tb-game .tb-score .school,
 .tournament-bracket .tb-game .tb-score .score {
+  text-align: left;
   display: inline;
-  float: left;
+  text-overflow: elipsis;
 }
 /* THEMES */
 .tournament-bracket.dark {

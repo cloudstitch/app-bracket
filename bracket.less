@@ -120,9 +120,24 @@
       margin-bottom: @scoreVpad;
       clear: both;
       overflow: hidden;
-      .seat, .school, .score {
-        display: inline;
+
+      .seat {
         float: left;
+        width: floor(@scoreWidth / 4);
+      }
+      .school {
+        float: left;
+        width: floor(@scoreWidth / 2);
+      }
+      .score {
+        float: left;
+        max-width: floor(@scoreWidth / 4) - 1;
+        text-align: right;
+      }
+      .seat, .school, .score {
+        text-align: left;
+        display: inline;
+        text-overflow: elipsis;
       }
     }
   }
@@ -178,7 +193,7 @@
       .school {
         color: #333;
       }
-      
+
       .score {
         color: #0B7AAD
       }
