@@ -151,13 +151,25 @@
 
   .ladder {
     .tb-score {
-      background-image: linear-gradient(to bottom,
-        #F6F7F8 0%,
-        #E4E5E6 50%,
-        #C9C9CB 100%
-      );
-      border: 1px solid #E9EAEC;
-      border-radius: ceil(@scoreHeight / 3);
+
+
+      .seat {
+        background-image: linear-gradient(to bottom,
+          #6ABCE5 0%,
+          #5E94C0 50%,
+          #0B7AAD 51%,
+          #004D83 100%);
+        border: 1px solid #E9EAEC;
+        border-radius-left: ceil(@scoreHeight / 3);
+      }
+      .school, .score {
+        background-image: linear-gradient(to bottom,
+          #F6F7F8 0%,
+          #E4E5E6 50%,
+          #C9C9CB 100%
+        );
+      }
+
     }
     .championship {
       background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
