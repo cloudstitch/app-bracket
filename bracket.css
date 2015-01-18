@@ -130,9 +130,13 @@
   background-image: linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
   border: 1px solid #E9EAEC;
   border-radius-left: 6px;
+  display: inline;
+  float: left;
 }
 .tournament-bracket.light .ladder .tb-score .school,
 .tournament-bracket.light .ladder .tb-score .score {
+  display: inline;
+  float: left;
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
 .tournament-bracket.light .ladder .championship {
