@@ -116,6 +116,9 @@
 .tournament-bracket.dark {
   background-image: radial-gradient(#454441, #191919);
 }
+.tournament-bracket.dark .ladder .championship {
+  background-image: linear-gradient(45deg, #676767 67, #4e4e4e);
+}
 .tournament-bracket.light {
   background-image: radial-gradient(#f4f4f8, #ced6df);
 }
