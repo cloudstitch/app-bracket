@@ -108,3 +108,6 @@
 .tournament-bracket.dark {
   background-image: radial-gradient(#454441, #191919);
 }
+.tournament-bracket.light {
+  background-image: radial-gradient(#f4f4f8, #ced6df);
+}
