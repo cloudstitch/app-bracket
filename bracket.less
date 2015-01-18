@@ -1,0 +1,104 @@
+/*
+ * Variables
+ */
+@scoreWidth: 103px;
+@scoreHeight: 17px;
+
+/*
+ * Generate Rows
+ */
+@scoreVpad: ceil(@scoreHeight / 6);
+@gameHeight: 2 * (@scoreHeight + (2*@scoreVpad));
+@gameWidth: @scoreWidth;
+
+/*
+ *
+ * .generate-rows(@n, @i: 1) when (@i =< @n) {
+ *   .tb-row-@{i} {
+ *     top: (@i * @rowHeight);
+ *   }
+ *   .generate-rows(@n, (@i + 1));
+ * }
+ * .generate-rows(23); 
+ */
+
+/*
+ * Generate Cols
+ * 8 33 8 -25 18
+ */
+@hpad0: ceil(@scoreWidth / 24);
+@hpad1: @hpad0 * 4;
+@hpad2: @hpad0;
+@hpad3: -(@hpad0*3);
+@hpad4: @hpad0 * 2;
+
+@hgutters0: @hpad0;
+@hgutters1: @hgutters0 + @hpad1;
+@hgutters2: @hgutters1 + @hpad2;
+@hgutters3: @hgutters2 + @hpad3;
+@hgutters4: @hgutters3 + @hpad4;
+@hgutters5: @hgutters4 + @hpad3;
+@hgutters6: @hgutters5 + @hpad2;
+@hgutters7: @hgutters6 + @hpad1;
+
+@left1: ((0 * @gameWidth) + @hgutters0);
+@left2: ((1 * @gameWidth) + @hgutters1);
+@left3: ((2 * @gameWidth) + @hgutters2);
+@left4: ((3 * @gameWidth) + @hgutters3);
+@left5: ((4 * @gameWidth) + @hgutters4);
+@left6: ((5 * @gameWidth) + @hgutters5);
+@left7: ((6 * @gameWidth) + @hgutters6);
+@left8: ((7 * @gameWidth) + @hgutters7);
+
+.tb-col-1 > div { margin-left: @hpad0; }
+.tb-col-2 > div { margin-left: @hpad1; }
+.tb-col-3 > div { margin-left: @hpad2; }
+.tb-col-4 > div { margin-left: @hpad3; }
+.tb-col-5 > div { margin-left: @hpad4; }
+.tb-col-6 > div { margin-left: @hpad3; }
+.tb-col-7 > div { margin-left: @hpad2; }
+.tb-col-8 > div { margin-left: @hpad1; }
+
+.tb-col-1 { float: left; }
+.tb-col-2 { float: left; }
+.tb-col-3 { float: left; }
+.tb-col-4 { float: left; }
+.tb-col-5 { float: left; }
+.tb-col-6 { float: left; }
+.tb-col-7 { float: left; }
+.tb-col-8 { float: left; }
+
+
+.tournament-bracket {
+  border: 1px solid black;
+  .tb-game, .tb-empty-game {
+    position: relative;
+    width: 100%;
+    display: block;
+    clear: both;
+    height: @gameHeight;
+    width: @gameWidth;
+  }
+
+  .tb-empty-score {
+    position: relative;
+    width: 100%;
+    display: block;
+    clear: both;
+    height: @gameHeight / 2;
+    width: @gameWidth;
+  }
+
+  .tb-game {
+
+    .tb-score {
+      background-color: red;
+      height: @scoreHeight;
+      width: @scoreWidth;
+      margin-top: @scoreVpad;
+      margin-bottom: @scoreVpad;
+    }
+  }
+  .tb-empty-game {
+  }
+}

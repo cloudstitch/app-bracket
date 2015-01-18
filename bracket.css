@@ -1,0 +1,95 @@
+/*
+ * Variables
+ */
+/*
+ * Generate Rows
+ */
+/*
+ *
+ * .generate-rows(@n, @i: 1) when (@i =< @n) {
+ *   .tb-row-@{i} {
+ *     top: (@i * @rowHeight);
+ *   }
+ *   .generate-rows(@n, (@i + 1));
+ * }
+ * .generate-rows(23); 
+ */
+/*
+ * Generate Cols
+ * 8 33 8 -25 18
+ */
+.tb-col-1 > div {
+  margin-left: 5px;
+}
+.tb-col-2 > div {
+  margin-left: 20px;
+}
+.tb-col-3 > div {
+  margin-left: 5px;
+}
+.tb-col-4 > div {
+  margin-left: -15px;
+}
+.tb-col-5 > div {
+  margin-left: 10px;
+}
+.tb-col-6 > div {
+  margin-left: -15px;
+}
+.tb-col-7 > div {
+  margin-left: 5px;
+}
+.tb-col-8 > div {
+  margin-left: 20px;
+}
+.tb-col-1 {
+  float: left;
+}
+.tb-col-2 {
+  float: left;
+}
+.tb-col-3 {
+  float: left;
+}
+.tb-col-4 {
+  float: left;
+}
+.tb-col-5 {
+  float: left;
+}
+.tb-col-6 {
+  float: left;
+}
+.tb-col-7 {
+  float: left;
+}
+.tb-col-8 {
+  float: left;
+}
+.tournament-bracket {
+  border: 1px solid black;
+}
+.tournament-bracket .tb-game,
+.tournament-bracket .tb-empty-game {
+  position: relative;
+  width: 100%;
+  display: block;
+  clear: both;
+  height: 46px;
+  width: 103px;
+}
+.tournament-bracket .tb-empty-score {
+  position: relative;
+  width: 100%;
+  display: block;
+  clear: both;
+  height: 23px;
+  width: 103px;
+}
+.tournament-bracket .tb-game .tb-score {
+  background-color: red;
+  height: 17px;
+  width: 103px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
