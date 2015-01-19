@@ -1,0 +1,61 @@
+.tournament-bracket.ncaa {
+  background-color: #EFEDEE;
+
+  .ladder {
+    .tb-score {
+
+      color: rgb(68, 68, 68);
+
+      font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      
+      box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+      -moz-box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+      -webkit-box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+
+      border-bottom: 1px solid rgb(68, 68, 68);
+      border-top: 1px solid rgb(136, 136, 136);
+      border-left: 1px solid rgb(136, 136, 136);
+      border-right: 1px solid rgb(136, 136, 136);
+
+
+      .seat {
+        background-image: linear-gradient(to bottom,
+          #6ABCE5 0%, #5E94C0 50%, #0B7AAD 51%, #004D83 100%);
+        background-image: -webkit-linear-gradient(to bottom,
+          #6ABCE5 0%, #5E94C0 50%, #0B7AAD 51%, #004D83 100%);
+
+        border: 1px solid #E9EAEC;
+        border-radius-left: ceil(@scoreHeight / 3);
+        display: inline;
+        float: left;
+      }
+
+      .school, .score {
+        background-image: linear-gradient(to bottom,
+          #F6F7F8 0%,
+          #E4E5E6 50%,
+          #C9C9CB 100%
+        );
+        background-image: -webkit-linear-gradient(to bottom,
+          #F6F7F8 0%,
+          #E4E5E6 50%,
+          #C9C9CB 100%
+        );
+
+      }
+
+      .school {
+        color: #333;
+      }
+
+      .score {
+        color: #0B7AAD
+      }
+
+    }
+    .championship {
+      background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
+    }  
+  }
+}

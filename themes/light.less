@@ -1,0 +1,91 @@
+
+.tournament-bracket.light {
+
+  /* Scores */
+
+  .ladder .tb-score {
+    .seat, .score {
+      font-family: Times, 'Times New Roman', serif;
+    }
+    .seat, .score, .school {
+      height: @scoreHeight;
+      line-height: @scoreHeight;
+      vertical-align: @scoreHeight;
+    }
+    .seat {
+      background-image: linear-gradient(to bottom,
+        #6ABCE5 0%, #5E94C0 50%, #0B7AAD 51%, #004D83 100%);
+      background-image: -webkit-linear-gradient(to bottom,
+        #6ABCE5 0%, #5E94C0 50%, #0B7AAD 51%, #004D83 100%);
+
+      color: white;
+      border: @borderWidth solid #E9EAEC;
+      display: inline;
+      float: left;    
+      text-align: center;
+    }
+    .school, .score {
+      background-image: linear-gradient(to bottom,
+        #F6F7F8 0%,
+        #E4E5E6 50%,
+        #C9C9CB 100%
+      );
+    }
+    .school {
+      border-top: @borderWidth solid #E9EAEC;
+      border-bottom: @borderWidth solid #E9EAEC;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .score {
+      color: #0B7AAD
+    }
+  }
+
+  .ladder .tb-left-col .tb-score {
+    .score {
+      padding-right: 0.4em;
+      border: @borderWidth solid #E9EAEC;
+      border-left: none;
+      border-top-right-radius: ceil(@scoreHeight / 3);
+      border-bottom-right-radius: ceil(@scoreHeight / 3);
+    }
+    .seat {
+      border-top-left-radius: ceil(@scoreHeight / 3);
+      border-bottom-left-radius: ceil(@scoreHeight / 3);
+    }
+    .school {
+      text-align: left;
+    }
+
+  }
+  .ladder .tb-right-col .tb-score {
+    .score {
+      border: @borderWidth solid #E9EAEC;
+      border-right: none;
+      border-top-left-radius: ceil(@scoreHeight / 3);
+      border-bottom-left-radius: ceil(@scoreHeight / 3);
+    }
+    .seat {
+      border-top-right-radius: ceil(@scoreHeight / 3);
+      border-bottom-right-radius: ceil(@scoreHeight / 3);
+    }
+    .school {
+      text-align: right;
+    }
+  }
+
+  /* Bracket */
+  background-image: radial-gradient(#F4F4F8, #CED6DF);
+  background-image: -webkit-radial-gradient(#F4F4F8, #CED6DF);
+
+  /* Championship */
+  .ladder {
+    .championship {
+      background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
+    }  
+  }
+}

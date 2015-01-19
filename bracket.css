@@ -1,170 +1,293 @@
 /*
- * Variables
- */
-/*
- * Generate Rows
- */
-/*
+ * Table of Contents
+ * ---------------------------------------------------------------------------
+ * 1. Constants
+ * 2. Derived Measures
+ * 3. Overall Bracket Structure
+ * 4. Columns
+ * 5. Theme Imports
  *
- * .generate-rows(@n, @i: 1) when (@i =< @n) {
- *   .tb-row-@{i} {
- *     top: (@i * @rowHeight);
- *   }
- *   .generate-rows(@n, (@i + 1));
- * }
- * .generate-rows(23); 
  */
 /*
- * Generate Cols
- * 8 33 8 -25 18
+ * Constants
+ * ---------------------------------------------------------------------------
  */
-.tb-col-1 > div {
-  margin-left: 5px;
-}
-.tb-col-2 > div {
-  margin-left: 20px;
-}
-.tb-col-3 > div {
-  margin-left: 5px;
-}
-.tb-col-4 > div {
-  margin-left: -15px;
-}
-.tb-col-5 > div {
-  margin-left: 10px;
-}
-.tb-col-6 > div {
-  margin-left: -15px;
-}
-.tb-col-7 > div {
-  margin-left: 5px;
-}
-.tb-col-8 > div {
-  margin-left: 20px;
-  margin-right: 5px;
-}
-.tb-col-1 {
-  float: left;
-}
-.tb-col-2 {
-  float: left;
-}
-.tb-col-3 {
-  float: left;
-}
-.tb-col-4 {
-  float: left;
-}
-.tb-col-5 {
-  float: left;
-}
-.tb-col-6 {
-  float: left;
-}
-.tb-col-7 {
-  float: left;
-}
-.tb-col-8 {
-  float: left;
-}
+/*
+ * Derived Measures
+ * ---------------------------------------------------------------------------
+ */
+/*
+ * Overall Bracket Structure
+ * ---------------------------------------------------------------------------
+ */
 .tournament-bracket {
-  border: 1px solid black;
-  overflow: auto;
+  /* All spacing is defined in terms of this */
+  font-size: 12px;
   display: block;
   text-align: center;
+  width: 106.6em;
+}
+.tournament-bracket .ladder .tb-left-col .tb-score .score {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tournament-bracket .ladder .tb-left-col .tb-score .seat {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tournament-bracket .ladder .tb-left-col .tb-score .school {
+  padding-right: 2.8em;
+  padding-left: 2.3em;
+}
+.tournament-bracket .ladder .tb-right-col .tb-score .score {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tournament-bracket .ladder .tb-right-col .tb-score .seat {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tournament-bracket .ladder .tb-right-col .tb-score .school {
+  padding-right: 2.3em;
+  padding-left: 2.8em;
 }
 .tournament-bracket .ladder {
-  width: totalWidth;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   overflow: auto;
-}
-.tournament-bracket .ladder .championship {
-  width: 241px;
-  height: 92px;
-  position: absolute;
-  bottom: 18px;
-  left: 324px;
-  border: 1px solid #555;
+  width: 106.6em;
+  /*
+    .championship {
+      width: 2 * @gameWidth + @hpad4 + @hpad4 - @hpad3;
+      height
+      position: absolute;
+      bottom: @scoreVpad * 6;
+      border: 1px solid #555;
+    }
+    */
 }
 .tournament-bracket .tb-game,
 .tournament-bracket .tb-empty-game {
   position: relative;
-  width: 100%;
   display: block;
   clear: both;
-  height: 46px;
-  width: 103px;
+  height: 4.9em;
+  width: 14.2em;
 }
 .tournament-bracket .tb-empty-score {
   position: relative;
   width: 100%;
   display: block;
   clear: both;
-  height: 23px;
-  width: 103px;
+  height: 2em;
+  width: 14.2em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 .tournament-bracket .tb-game .tb-score {
-  height: 17px;
-  width: 103px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  height: 2em;
+  width: 14em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   clear: both;
   overflow: hidden;
+  background-color: blue;
 }
 .tournament-bracket .tb-game .tb-score .seat {
-  float: left;
-  width: 25px;
-}
-.tournament-bracket .tb-game .tb-score .school {
-  float: left;
-  width: 51px;
+  width: 1.9em;
+  text-align: center;
 }
 .tournament-bracket .tb-game .tb-score .score {
-  float: left;
-  max-width: 24px;
-  text-align: right;
+  width: 2.4em;
+  text-align: center;
 }
 .tournament-bracket .tb-game .tb-score .seat,
 .tournament-bracket .tb-game .tb-score .school,
 .tournament-bracket .tb-game .tb-score .score {
-  text-align: left;
-  display: inline;
   text-overflow: elipsis;
 }
-/* THEMES */
-.tournament-bracket.dark {
-  background-image: radial-gradient(#454441, #191919);
+/*
+ * Columns
+ * ---------------------------------------------------------------------------
+ */
+.tb-col-1 > div {
+  margin-left: 0.5em;
 }
-.tournament-bracket.dark .ladder .tb-score {
-  background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
-  border: 1px solid #E9EAEC;
-  border-radius: 6px;
+.tb-col-2 > div {
+  margin-left: 0.5em;
 }
-.tournament-bracket.dark .ladder .championship {
-  background-image: linear-gradient(45deg, #676767 67, #4e4e4e);
+.tb-col-3 > div {
+  margin-left: 0em;
 }
+.tb-col-4 > div {
+  margin-left: -6em;
+}
+.tb-col-5 > div {
+  margin-left: 1em;
+}
+.tb-col-6 > div {
+  margin-left: -6em;
+}
+.tb-col-7 > div {
+  margin-left: 0em;
+}
+.tb-col-8 > div {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.tb-col {
+  display: inline-block;
+  vertical-align: top;
+}
+.tb-col-1 {
+  width: 14.7em;
+}
+.tb-col-2 {
+  width: 14.7em;
+}
+.tb-col-3 {
+  width: 14.2em;
+}
+.tb-col-4 {
+  width: 8.2em;
+}
+.tb-col-5 {
+  width: 15.2em;
+}
+.tb-col-6 {
+  width: 8.2em;
+}
+.tb-col-7 {
+  width: 14.2em;
+}
+.tb-col-8 {
+  width: 15.2em;
+}
+/*
+ * Themes
+ * ---------------------------------------------------------------------------
+ */
 .tournament-bracket.light {
+  /* Scores */
+  /* Bracket */
   background-image: radial-gradient(#f4f4f8, #ced6df);
+  background-image: -webkit-radial-gradient(#f4f4f8, #ced6df);
+  /* Championship */
+}
+.tournament-bracket.light .ladder .tb-score .seat,
+.tournament-bracket.light .ladder .tb-score .score {
+  font-family: Times, 'Times New Roman', serif;
+}
+.tournament-bracket.light .ladder .tb-score .seat,
+.tournament-bracket.light .ladder .tb-score .score,
+.tournament-bracket.light .ladder .tb-score .school {
+  height: 2em;
+  line-height: 2em;
+  vertical-align: 2em;
 }
 .tournament-bracket.light .ladder .tb-score .seat {
   background-image: linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
-  border: 1px solid #E9EAEC;
-  border-radius-left: 6px;
+  background-image: -webkit-linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
+  color: white;
+  border: 0.1em solid #e9eaec;
   display: inline;
   float: left;
+  text-align: center;
 }
 .tournament-bracket.light .ladder .tb-score .school,
 .tournament-bracket.light .ladder .tb-score .score {
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
 .tournament-bracket.light .ladder .tb-score .school {
+  border-top: 0.1em solid #e9eaec;
+  border-bottom: 0.1em solid #e9eaec;
   color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .tournament-bracket.light .ladder .tb-score .score {
   color: #0b7aad;
 }
+.tournament-bracket.light .ladder .tb-left-col .tb-score .score {
+  padding-right: 0.4em;
+  border: 0.1em solid #e9eaec;
+  border-left: none;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.tournament-bracket.light .ladder .tb-left-col .tb-score .seat {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+.tournament-bracket.light .ladder .tb-left-col .tb-score .school {
+  text-align: left;
+}
+.tournament-bracket.light .ladder .tb-right-col .tb-score .score {
+  border: 0.1em solid #e9eaec;
+  border-right: none;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+.tournament-bracket.light .ladder .tb-right-col .tb-score .seat {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.tournament-bracket.light .ladder .tb-right-col .tb-score .school {
+  text-align: right;
+}
 .tournament-bracket.light .ladder .championship {
+  background-image: linear-gradient(45deg, #5ac6db, #00b3ce);
+}
+.tournament-bracket.dark {
+  background-image: radial-gradient(#454441, #191919);
+}
+.tournament-bracket.dark .ladder .tb-score {
+  background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
+  border: 1px solid #E9EAEC;
+  border-radius: 1em;
+}
+.tournament-bracket.dark .ladder .championship {
+  background-image: linear-gradient(45deg, #676767 67, #4e4e4e);
+}
+.tournament-bracket.ncaa {
+  background-color: #EFEDEE;
+}
+.tournament-bracket.ncaa .ladder .tb-score {
+  color: #444444;
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+  -moz-box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+  -webkit-box-shadow: rgba(10, 10, 10, 0.0980392) 0px 1px 3px 0px;
+  border-bottom: 1px solid #444444;
+  border-top: 1px solid #888888;
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
+}
+.tournament-bracket.ncaa .ladder .tb-score .seat {
+  background-image: linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
+  background-image: -webkit-linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
+  border: 1px solid #E9EAEC;
+  border-radius-left: 1em;
+  display: inline;
+  float: left;
+}
+.tournament-bracket.ncaa .ladder .tb-score .school,
+.tournament-bracket.ncaa .ladder .tb-score .score {
+  background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
+  background-image: -webkit-linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
+}
+.tournament-bracket.ncaa .ladder .tb-score .school {
+  color: #333;
+}
+.tournament-bracket.ncaa .ladder .tb-score .score {
+  color: #0b7aad;
+}
+.tournament-bracket.ncaa .ladder .championship {
   background-image: linear-gradient(45deg, #5ac6db, #00b3ce);
 }

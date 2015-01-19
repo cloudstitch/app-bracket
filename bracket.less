@@ -1,101 +1,80 @@
 /*
- * Variables
- */
-@scoreWidth: 103px;
-@scoreHeight: 17px;
-
-/*
- * Generate Rows
- */
-@scoreVpad: ceil(@scoreHeight / 6);
-@gameHeight: 2 * (@scoreHeight + (2*@scoreVpad));
-@gameWidth: @scoreWidth;
-
-/*
+ * Table of Contents
+ * ---------------------------------------------------------------------------
+ * 1. Constants
+ * 2. Derived Measures
+ * 3. Overall Bracket Structure
+ * 4. Columns
+ * 5. Theme Imports
  *
- * .generate-rows(@n, @i: 1) when (@i =< @n) {
- *   .tb-row-@{i} {
- *     top: (@i * @rowHeight);
- *   }
- *   .generate-rows(@n, (@i + 1));
- * }
- * .generate-rows(23); 
  */
 
 /*
- * Generate Cols
- * 8 33 8 -25 18
+ * Constants
+ * ---------------------------------------------------------------------------
  */
-@hpad0: ceil(@scoreWidth / 24);
-@hpad1: @hpad0 * 4;
-@hpad2: @hpad0;
-@hpad3: -(@hpad0*3);
-@hpad4: @hpad0 * 2;
 
-@hgutters0: @hpad0;
-@hgutters1: @hgutters0 + @hpad1;
-@hgutters2: @hgutters1 + @hpad2;
-@hgutters3: @hgutters2 + @hpad3;
-@hgutters4: @hgutters3 + @hpad4;
-@hgutters5: @hgutters4 + @hpad3;
-@hgutters6: @hgutters5 + @hpad2;
-@hgutters7: @hgutters6 + @hpad1;
+@scoreWidth: 14em;
+@scoreHeight: 2em;
+@scoreVpad: 0.25em;
+@seatWidth: 2em;
+@scoreNumberWidth: 2.5em;
+@borderWidth: 0.1em;
 
-@left1: ((0 * @gameWidth) + @hgutters0);
-@left2: ((1 * @gameWidth) + @hgutters1);
-@left3: ((2 * @gameWidth) + @hgutters2);
-@left4: ((3 * @gameWidth) + @hgutters3);
-@left5: ((4 * @gameWidth) + @hgutters4);
-@left6: ((5 * @gameWidth) + @hgutters5);
-@left7: ((6 * @gameWidth) + @hgutters6);
-@left8: ((7 * @gameWidth) + @hgutters7);
-@totalWidth: @left8 + @hpad0;
+@hpad0: 0.5em;
+@hpad1: 0.5em;
+@hpad2: 0em;
+@hpad3: -6em;
+@hpad4: 1em;
 
-.tb-col-1 > div { margin-left: @hpad0; }
-.tb-col-2 > div { margin-left: @hpad1; }
-.tb-col-3 > div { margin-left: @hpad2; }
-.tb-col-4 > div { margin-left: @hpad3; }
-.tb-col-5 > div { margin-left: @hpad4; }
-.tb-col-6 > div { margin-left: @hpad3; }
-.tb-col-7 > div { margin-left: @hpad2; }
-.tb-col-8 > div { margin-left: @hpad1; margin-right: @hpad0; }
+/*
+ * Derived Measures
+ * ---------------------------------------------------------------------------
+ */
+@gameWidth: @scoreWidth + 2 * @borderWidth; // for the border
+@gameHeight: (2 * @scoreHeight) + (2 * @scoreVpad) + (4 * @borderWidth); 
 
-.tb-col-1 { float: left; }
-.tb-col-2 { float: left; }
-.tb-col-3 { float: left; }
-.tb-col-4 { float: left; }
-.tb-col-5 { float: left; }
-.tb-col-6 { float: left; }
-.tb-col-7 { float: left; }
-.tb-col-8 { float: left; }
-
+/*
+ * Overall Bracket Structure
+ * ---------------------------------------------------------------------------
+ */
 
 .tournament-bracket {
-  border: 1px solid black;
-  overflow: auto;
+
+  /* All spacing is defined in terms of this */
+  font-size: 12px;
   display: block;
   text-align: center;
+  width: @totalWidth;
+
+  .ladder .tb-left-col .tb-score {
+    .score { position: absolute; right: 0; top: 0; }
+    .seat  { position: absolute; left: 0; top: 0;  }
+    .school{ padding-right: @scoreNumberWidth + 0.3em; padding-left: @seatWidth  + 0.3em; }
+  }
+  .ladder .tb-right-col .tb-score {
+    .score { position: absolute; left: 0; top: 0; }
+    .seat  { position: absolute; right: 0; top: 0  }
+    .school{ padding-right: @seatWidth + 0.3em; padding-left: @scoreNumberWidth + 0.3em; }
+  }
 
   .ladder {
-    width: totalWidth;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     overflow: auto;
-    
+    width: @totalWidth;
+    /*
     .championship {
       width: 2 * @gameWidth + @hpad4 + @hpad4 - @hpad3;
-      height: 2 * @gameHeight;
+      height
       position: absolute;
       bottom: @scoreVpad * 6;
-      left: @left4;
       border: 1px solid #555;
     }
+    */
   }
 
   .tb-game, .tb-empty-game {
     position: relative;
-    width: 100%;
     display: block;
     clear: both;
     height: @gameHeight;
@@ -107,8 +86,10 @@
     width: 100%;
     display: block;
     clear: both;
-    height: @gameHeight / 2;
+    height: @scoreHeight;
     width: @gameWidth;
+    margin-top: @scoreVpad;
+    margin-bottom: @scoreVpad;
   }
 
   .tb-game {
@@ -120,23 +101,19 @@
       margin-bottom: @scoreVpad;
       clear: both;
       overflow: hidden;
+      background-color: blue;
 
       .seat {
-        float: left;
-        width: floor(@scoreWidth / 4);
+        width: @seatWidth - @borderWidth;
+        text-align: center;
       }
-      .school {
-        float: left;
-        width: floor(@scoreWidth / 2);
+      .school {      
       }
       .score {
-        float: left;
-        max-width: floor(@scoreWidth / 4) - 1;
-        text-align: right;
+        width: @scoreNumberWidth - @borderWidth;
+        text-align: center;
       }
       .seat, .school, .score {
-        text-align: left;
-        display: inline;
         text-overflow: elipsis;
       }
     }
@@ -145,62 +122,51 @@
   }
 }
 
+/*
+ * Columns
+ * ---------------------------------------------------------------------------
+ */
 
-/* THEMES */
+@hgutters0: @hpad0;
+@hgutters1: @hgutters0 + @hpad1;
+@hgutters2: @hgutters1 + @hpad2;
+@hgutters3: @hgutters2 + @hpad3;
+@hgutters4: @hgutters3 + @hpad4;
+@hgutters5: @hgutters4 + @hpad3;
+@hgutters6: @hgutters5 + @hpad2;
+@hgutters7: @hgutters6 + @hpad1;
 
-.tournament-bracket.dark {
-  background-image: radial-gradient(#454441, #191919);
+.tb-col-1 > div { margin-left: @hpad0; }
+.tb-col-2 > div { margin-left: @hpad1; }
+.tb-col-3 > div { margin-left: @hpad2; }
+.tb-col-4 > div { margin-left: @hpad3; }
+.tb-col-5 > div { margin-left: @hpad4; }
+.tb-col-6 > div { margin-left: @hpad3; }
+.tb-col-7 > div { margin-left: @hpad2; }
+.tb-col-8 > div { margin-left: @hpad1; margin-right: @hpad0; }
 
-  .ladder {
-    .tb-score {
-      background-image: linear-gradient(to bottom,
-        #F6F7F8 0%,
-        #E4E5E6 50%,
-        #C9C9CB 100%
-      );
-      border: 1px solid #E9EAEC;
-      border-radius: ceil(@scoreHeight / 3);
-    }  
-    .championship {
-      background-image: linear-gradient(45deg, #67676767, #4E4E4E);
-    }
-  }  
+.tb-col {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.tournament-bracket.light {
-  background-image: radial-gradient(#F4F4F8, #CED6DF);
+.tb-col-1 { width: @gameWidth + @hpad0 }
+.tb-col-2 { width: @gameWidth + @hpad1 }
+.tb-col-3 { width: @gameWidth + @hpad2 }
+.tb-col-4 { width: @gameWidth + @hpad3 }
+.tb-col-5 { width: @gameWidth + @hpad4 }
+.tb-col-6 { width: @gameWidth + @hpad3 }
+.tb-col-7 { width: @gameWidth + @hpad2 }
+.tb-col-8 { width: @gameWidth + @hpad1 + @hpad0 }
 
-  .ladder {
-    .tb-score {
+@totalWidth: (8 * @gameWidth) + (2 * (@hpad0 + @hpad1 + @hpad2 + @hpad3)) + @hpad4 + 2em;
 
-      .seat {
-        background-image: linear-gradient(to bottom,
-          #6ABCE5 0%, #5E94C0 50%, #0B7AAD 51%, #004D83 100%);
-        border: 1px solid #E9EAEC;
-        border-radius-left: ceil(@scoreHeight / 3);
-        display: inline;
-        float: left;
-      }
+/*
+ * Themes
+ * ---------------------------------------------------------------------------
+ */
 
-      .school, .score {
-        background-image: linear-gradient(to bottom,
-          #F6F7F8 0%,
-          #E4E5E6 50%,
-          #C9C9CB 100%
-        );
-      }
+@import "themes/light";
+@import "themes/dark";
+@import "themes/ncaa";
 
-      .school {
-        color: #333;
-      }
-
-      .score {
-        color: #0B7AAD
-      }
-
-    }
-    .championship {
-      background-image: linear-gradient(45deg, #5AC6DB, #00B3CE);
-    }  
-  }
-}
