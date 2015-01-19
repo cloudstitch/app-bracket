@@ -25,7 +25,7 @@
   font-size: 12px;
   display: block;
   text-align: center;
-  width: 106.6em;
+  width: 102.6em;
 }
 .tournament-bracket .ladder .tb-left-col .tb-score .score {
   position: absolute;
@@ -58,7 +58,7 @@
 .tournament-bracket .ladder {
   display: block;
   overflow: auto;
-  width: 106.6em;
+  width: 102.6em;
   /*
     .championship {
       width: 2 * @gameWidth + @hpad4 + @hpad4 - @hpad3;
@@ -83,18 +83,18 @@
   display: block;
   clear: both;
   height: 2em;
-  width: 14.2em;
+  width: 14em;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
 .tournament-bracket .tb-game .tb-score {
-  height: 2em;
   width: 14em;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   clear: both;
   overflow: hidden;
-  background-color: blue;
+  display: block;
+  position: relative;
 }
 .tournament-bracket .tb-game .tb-score .seat {
   width: 1.9em;
@@ -120,7 +120,7 @@
   margin-left: 0.5em;
 }
 .tb-col-3 > div {
-  margin-left: 0em;
+  margin-left: -2em;
 }
 .tb-col-4 > div {
   margin-left: -6em;
@@ -132,7 +132,7 @@
   margin-left: -6em;
 }
 .tb-col-7 > div {
-  margin-left: 0em;
+  margin-left: -2em;
 }
 .tb-col-8 > div {
   margin-left: 0.5em;
@@ -149,7 +149,7 @@
   width: 14.7em;
 }
 .tb-col-3 {
-  width: 14.2em;
+  width: 12.2em;
 }
 .tb-col-4 {
   width: 8.2em;
@@ -161,10 +161,21 @@
   width: 8.2em;
 }
 .tb-col-7 {
-  width: 14.2em;
+  width: 12.2em;
 }
 .tb-col-8 {
   width: 15.2em;
+}
+/*
+ * Dotted Lines
+ * ---------------------------------------------------------------------------
+ */
+canvas.ttl-quarter-line {
+  position: absolute;
+  border: 1px solid red;
+  top: 5.4em;
+  left: 29.4em;
+  height: 5em;
 }
 /*
  * Themes
@@ -202,8 +213,8 @@
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
 .tournament-bracket.light .ladder .tb-score .school {
-  border-top: 0.1em solid #e9eaec;
-  border-bottom: 0.1em solid #e9eaec;
+  border: 0.1em solid #e9eaec;
+  border-radius: 1em;
   color: #333;
   white-space: nowrap;
   overflow: hidden;

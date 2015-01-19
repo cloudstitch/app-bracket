@@ -23,7 +23,7 @@
 
 @hpad0: 0.5em;
 @hpad1: 0.5em;
-@hpad2: 0em;
+@hpad2: -2em;
 @hpad3: -6em;
 @hpad4: 1em;
 
@@ -87,7 +87,7 @@
     display: block;
     clear: both;
     height: @scoreHeight;
-    width: @gameWidth;
+    width: @scoreWidth;
     margin-top: @scoreVpad;
     margin-bottom: @scoreVpad;
   }
@@ -95,13 +95,13 @@
   .tb-game {
 
     .tb-score {
-      height: @scoreHeight;
       width: @scoreWidth;
       margin-top: @scoreVpad;
       margin-bottom: @scoreVpad;
       clear: both;
       overflow: hidden;
-      background-color: blue;
+      display: block; 
+      position: relative;
 
       .seat {
         width: @seatWidth - @borderWidth;
@@ -160,6 +160,21 @@
 .tb-col-8 { width: @gameWidth + @hpad1 + @hpad0 }
 
 @totalWidth: (8 * @gameWidth) + (2 * (@hpad0 + @hpad1 + @hpad2 + @hpad3)) + @hpad4 + 2em;
+
+/*
+ * Dotted Lines
+ * ---------------------------------------------------------------------------
+ */
+canvas.quarter-line {
+  position: absolute;
+  height: 2 * @scoreHeight + 4 * @scoreVpad;  
+  border: 1px solid red;
+}
+
+canvas.ttl-quarter-line {
+  top: @gameHeight + @scoreVpad + @scoreVpad;
+  left: @gameWidth + @hpad0 + @hpad1 + @gameWidth;
+}
 
 /*
  * Themes
