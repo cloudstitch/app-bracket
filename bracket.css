@@ -170,36 +170,38 @@
  * Dotted Lines
  * ---------------------------------------------------------------------------
  */
-canvas.ttl-quarter-line {
+canvas.quarter-line {
   position: absolute;
+  height: 5em;
   border: 1px solid red;
+}
+canvas.ttl-quarter-line {
   top: 5.4em;
   left: 29.4em;
-  height: 5em;
 }
 /*
  * Themes
  * ---------------------------------------------------------------------------
  */
-.tournament-bracket.light {
+.tournament-bracket .light {
   /* Scores */
   /* Bracket */
   background-image: radial-gradient(#f4f4f8, #ced6df);
   background-image: -webkit-radial-gradient(#f4f4f8, #ced6df);
   /* Championship */
 }
-.tournament-bracket.light .ladder .tb-score .seat,
-.tournament-bracket.light .ladder .tb-score .score {
+.tournament-bracket .light .ladder .tb-score .seat,
+.tournament-bracket .light .ladder .tb-score .score {
   font-family: Times, 'Times New Roman', serif;
 }
-.tournament-bracket.light .ladder .tb-score .seat,
-.tournament-bracket.light .ladder .tb-score .score,
-.tournament-bracket.light .ladder .tb-score .school {
+.tournament-bracket .light .ladder .tb-score .seat,
+.tournament-bracket .light .ladder .tb-score .score,
+.tournament-bracket .light .ladder .tb-score .school {
   height: 2em;
   line-height: 2em;
   vertical-align: 2em;
 }
-.tournament-bracket.light .ladder .tb-score .seat {
+.tournament-bracket .light .ladder .tb-score .seat {
   background-image: linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
   background-image: -webkit-linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
   color: white;
@@ -208,11 +210,11 @@ canvas.ttl-quarter-line {
   float: left;
   text-align: center;
 }
-.tournament-bracket.light .ladder .tb-score .school,
-.tournament-bracket.light .ladder .tb-score .score {
+.tournament-bracket .light .ladder .tb-score .school,
+.tournament-bracket .light .ladder .tb-score .score {
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
-.tournament-bracket.light .ladder .tb-score .school {
+.tournament-bracket .light .ladder .tb-score .school {
   border: 0.1em solid #e9eaec;
   border-radius: 1em;
   color: #333;
@@ -221,54 +223,54 @@ canvas.ttl-quarter-line {
   text-overflow: ellipsis;
   font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.tournament-bracket.light .ladder .tb-score .score {
+.tournament-bracket .light .ladder .tb-score .score {
   color: #0b7aad;
 }
-.tournament-bracket.light .ladder .tb-left-col .tb-score .score {
+.tournament-bracket .light .ladder .tb-left-col .tb-score .score {
   padding-right: 0.4em;
   border: 0.1em solid #e9eaec;
   border-left: none;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
 }
-.tournament-bracket.light .ladder .tb-left-col .tb-score .seat {
+.tournament-bracket .light .ladder .tb-left-col .tb-score .seat {
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
 }
-.tournament-bracket.light .ladder .tb-left-col .tb-score .school {
+.tournament-bracket .light .ladder .tb-left-col .tb-score .school {
   text-align: left;
 }
-.tournament-bracket.light .ladder .tb-right-col .tb-score .score {
+.tournament-bracket .light .ladder .tb-right-col .tb-score .score {
   border: 0.1em solid #e9eaec;
   border-right: none;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
 }
-.tournament-bracket.light .ladder .tb-right-col .tb-score .seat {
+.tournament-bracket .light .ladder .tb-right-col .tb-score .seat {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
 }
-.tournament-bracket.light .ladder .tb-right-col .tb-score .school {
+.tournament-bracket .light .ladder .tb-right-col .tb-score .school {
   text-align: right;
 }
-.tournament-bracket.light .ladder .championship {
+.tournament-bracket .light .ladder .championship {
   background-image: linear-gradient(45deg, #5ac6db, #00b3ce);
 }
-.tournament-bracket.dark {
+.tournament-bracket .dark {
   background-image: radial-gradient(#454441, #191919);
 }
-.tournament-bracket.dark .ladder .tb-score {
+.tournament-bracket .dark .ladder .tb-score {
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
   border: 1px solid #E9EAEC;
   border-radius: 1em;
 }
-.tournament-bracket.dark .ladder .championship {
+.tournament-bracket .dark .ladder .championship {
   background-image: linear-gradient(45deg, #676767 67, #4e4e4e);
 }
-.tournament-bracket.ncaa {
+.tournament-bracket .flat {
   background-color: #EFEDEE;
 }
-.tournament-bracket.ncaa .ladder .tb-score {
+.tournament-bracket .flat .ladder .tb-score {
   color: #444444;
   font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 10px;
@@ -280,7 +282,7 @@ canvas.ttl-quarter-line {
   border-left: 1px solid #888888;
   border-right: 1px solid #888888;
 }
-.tournament-bracket.ncaa .ladder .tb-score .seat {
+.tournament-bracket .flat .ladder .tb-score .seat {
   background-image: linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
   background-image: -webkit-linear-gradient(to bottom, #6abce5 0%, #5e94c0 50%, #0b7aad 51%, #004d83 100%);
   border: 1px solid #E9EAEC;
@@ -288,17 +290,17 @@ canvas.ttl-quarter-line {
   display: inline;
   float: left;
 }
-.tournament-bracket.ncaa .ladder .tb-score .school,
-.tournament-bracket.ncaa .ladder .tb-score .score {
+.tournament-bracket .flat .ladder .tb-score .school,
+.tournament-bracket .flat .ladder .tb-score .score {
   background-image: linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
   background-image: -webkit-linear-gradient(to bottom, #f6f7f8 0%, #e4e5e6 50%, #c9c9cb 100%);
 }
-.tournament-bracket.ncaa .ladder .tb-score .school {
+.tournament-bracket .flat .ladder .tb-score .school {
   color: #333;
 }
-.tournament-bracket.ncaa .ladder .tb-score .score {
+.tournament-bracket .flat .ladder .tb-score .score {
   color: #0b7aad;
 }
-.tournament-bracket.ncaa .ladder .championship {
+.tournament-bracket .flat .ladder .championship {
   background-image: linear-gradient(45deg, #5ac6db, #00b3ce);
 }
