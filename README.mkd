@@ -1,0 +1,22 @@
+Sports Bracket
+==============
+
+Development instructions:
+
+Complete the LESS and Javascript necessary to implement a sports bracket.
+
+* The Javascript and HTML should be the same across all themes
+* The LESS files should be the only thing that changes
+  1. themes/light.less should look like the photo in mock-images/light.png
+  2. themes/dark.less should look like the photo in mock-images/dark.png
+  3. themes/ncaa.less should look like the photo in mock-images/ncaa.png
+* The way to invoke a theme shall be an outer class wrapper on the whole widget
+
+Requirements:
+  1. The entire bracket should magnify smoothly (as the prototype does now)
+  2. Each match (except for the final match) should be located exactly vertically between its parent matches
+  3. Dashed lines should go between matches
+
+Build instructions:
+
+* To build b

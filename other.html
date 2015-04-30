@@ -3,40 +3,17 @@
     <link rel="stylesheet" href="bracket.css" />
 
     <!--  These are just to help check and develop bracket.js  -->
-    <link rel="stylesheet" href="lib/test-harness.css" />
     <script src="lib/jquery.min.js"></script>
     <script src="lib/test-harness.js"></script>
 
+
+
     <script src="bracket.js"></script>
 
+    <script src="http://cloudstitch.io/release/cloudstitch-0.9.14.js" app="ted/tournament-bracket"></script>
+    <link type="cloudstitch/gsheet" href="http://cloudstitch.io/ted/tournament-bracket/datasource/sheet" />
   </head>
   <body>
-    <section id="test-harness">
-      <h3>Test Harness</h3>
-      <table>
-        <tr>
-          <td>Theme</td>
-          <td>Dataset</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="theme-select">
-              <option>light</option>
-              <option>dark</option>
-              <option>ncaa</option>
-            </select>
-          </td>
-          <td>
-            <select id="dataset-select">
-              <option>bracket 1</option>
-              <option>bracket 2</option>
-              <option>bracket 3</option>
-            </select>
-          </td>
-        </tr>
-      </table>
-    </section>
-
     <div id="tournament-bracket">
       <div class="tournament-bracket">
         <div data-role="theme-specifier" data-cts='this {"attribute": "class"} :is sheet|Options!B2;' class="light">
