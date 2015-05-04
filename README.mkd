@@ -1,22 +1,37 @@
 Sports Bracket
 ==============
 
-Development instructions:
+## Work to be completed
+
+* FINISH CSS THEMES
+  1. themes/light.less should approximately like the photo in mock-images/light.png
+  2. themes/dark.less should look approximately like the photo in mock-images/dark.png
+  3. themes/ncaa.less should look approximately like the photo in mock-images/ncaa.png
+* CREATE THE WINNER MATCH BLOCK AND SET THE WINNER POSITION
+  1. The test harness lets you toggle between three diffrent bracket sizes. `full`, `half`, and `quarter`. The bracket should be centered in its container for each of these sizes.
+  2. The `full` size should have the winner match in the center bottom. The `half` and `quarter` sizes should have the winner match vertically centered to the right of the bracket
+* DRAW DASHED LINES BETWEEN MATCHES
+  1. Dashed or solid lines should be drawn between the matches like the mockup images show. It's ok for the lines to be in the same place for all themes, and just have the visual styles change. Using Javascript to draw the lines is OK as long as resizing the bracket does not break the rendering.
+* FIX VERTICAL POSITIONING OF MATCHES
+  1. Each match (except for the final match) should be located exactly vertically between its parent matches. Right now the positioning is a bit off.
+
+The entire bracket should magnify smoothly (as the prototype does now)
+
+## Development instructions:
 
 Complete the LESS and Javascript necessary to implement a sports bracket.
 
 * The Javascript and HTML should be the same across all themes
-* The LESS files should be the only thing that changes
-  1. themes/light.less should look like the photo in mock-images/light.png
-  2. themes/dark.less should look like the photo in mock-images/dark.png
-  3. themes/ncaa.less should look like the photo in mock-images/ncaa.png
-* The way to invoke a theme shall be an outer class wrapper on the whole widget
+* The three themes should be implemented using the LESS files in themes/
+* The way to invoke a theme shall be an outer class wrapper on the whole widget. The test harness in index.html does this for you.
+* This should largely be a CSS exercise: please do not change the structure or annotations on the HTML, which we are using to connect this bracket to a Newspaper's back-end database
 
-Requirements:
-  1. The entire bracket should magnify smoothly (as the prototype does now)
-  2. Each match (except for the final match) should be located exactly vertically between its parent matches
-  3. Dashed lines should go between matches
+## Build instructions:
 
-Build instructions:
+* To build the less, run `lessc bracket.less > bracket.css`
 
-* To build b
+Test instructions:
+
+* Load index.html in the browser
+
+

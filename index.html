@@ -28,44 +28,44 @@
           </td>
           <td>
             <select id="dataset-select">
-              <option>bracket 1</option>
-              <option>bracket 2</option>
-              <option>bracket 3</option>
+              <option value="data-1">bracket 1</option>
+              <option value="data-2">bracket 2</option>
+              <option value="data-3">bracket 3</option>
             </select>
           </td>
         </tr>
       </table>
     </section>
 
-    <div id="tournament-bracket">
+    <div id="tournament-bracket" class="full">
       <div class="tournament-bracket">
         <div data-role="theme-specifier" data-cts='this {"attribute": "class"} :is sheet|Options!B2;' class="light">
           <canvas class="quarter-line ttl-quarter-line"></canvas>
           <div class="ladder">
-            <div class="tb-col-1 tb-col tb-left-col" show-if="ComputedLayoutDecisions!B2">
+            <div class="tb-col-1 tb-col tb-left-col" show-if="SportsBracket|ComputedLayoutDecisions!B2">
               <div class="tb-game thirtytwo-left-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E2">67</div>
-                  <div class="school" connect="ComputedGameBlocks!D2">Florida</div>
-                  <div class="score"  connect="ComputedGameBlocks!F2">55</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E2">67</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D2">Florida</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F2">55</div>
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I2">16</div>
-                  <div class="school" connect="ComputedGameBlocks!H2">Albany</div>
-                  <div class="score"  connect="ComputedGameBlocks!J2">55</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I2">16</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H2">Albany</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J2">55</div>
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-left-2" data-final="true">
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!E3">8</div>
-                  <div class="school" connect="ComputedGameBlocks!D3">Colorado</div>
-                  <div class="score"  connect="ComputedGameBlocks!F3">48</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E3">8</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D3">Colorado</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F3">48</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!I3">9</div>
-                  <div class="school" connect="ComputedGameBlocks!H3">Pittsburgh</div>
-                  <div class="score"  connect="ComputedGameBlocks!J3">77</div>                              
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I3">9</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H3">Pittsburgh</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J3">77</div>                              
                 </div>
               </div>
 
@@ -73,27 +73,27 @@
 
               <div class="tb-game thirtytwo-left-3" data-final="true">
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!E4">5</div>
-                  <div class="school" connect="ComputedGameBlocks!D4">VCU</div>
-                  <div class="score"  connect="ComputedGameBlocks!F4">75</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E4">5</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D4">VCU</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F4">75</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!I4">12</div>
-                  <div class="school" connect="ComputedGameBlocks!H4">Steph. F. Austin</div>
-                  <div class="score"  connect="ComputedGameBlocks!J4">77</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I4">12</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H4">Steph. F. Austin</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J4">77</div>                
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-left-4" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E5">4</div>
-                  <div class="school" connect="ComputedGameBlocks!D5">UCLA</div>
-                  <div class="score"  connect="ComputedGameBlocks!F5">76</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E5">4</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D5">UCLA</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F5">76</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I5">13</div>
-                  <div class="school" connect="ComputedGameBlocks!H5">Tulsa</div>
-                  <div class="score"  connect="ComputedGameBlocks!J5">59</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I5">13</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H5">Tulsa</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J5">59</div>                
                 </div>
               </div>
 
@@ -101,27 +101,27 @@
 
               <div class="tb-game thirtytwo-left-5" data-final="true">
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!E6">6</div>
-                  <div class="school" connect="ComputedGameBlocks!D6">Ohio State</div>
-                  <div class="score"  connect="ComputedGameBlocks!F6">59</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E6">6</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D6">Ohio State</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F6">59</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!I6">11</div>
-                  <div class="school" connect="ComputedGameBlocks!H6">Dayton</div>
-                  <div class="score"  connect="ComputedGameBlocks!J6">60</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I6">11</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H6">Dayton</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J6">60</div>                
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-left-6" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E7">3</div>
-                  <div class="school" connect="ComputedGameBlocks!D7">Syracuse</div>
-                  <div class="score"  connect="ComputedGameBlocks!F7">77</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E7">3</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D7">Syracuse</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F7">77</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I7">14</div>
-                  <div class="school" connect="ComputedGameBlocks!H7">Western Mich.</div>
-                  <div class="score"  connect="ComputedGameBlocks!J7">53</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I7">14</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H7">Western Mich.</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J7">53</div>                
                 </div>
               </div>
 
@@ -129,44 +129,44 @@
 
               <div class="tb-game thirtytwo-left-7" data-final="true">
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!E8">7</div>
-                  <div class="school" connect="ComputedGameBlocks!D8">New Mexico</div>
-                  <div class="score"  connect="ComputedGameBlocks!F8">53</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E8">7</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D8">New Mexico</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F8">53</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!I8">10</div>
-                  <div class="school" connect="ComputedGameBlocks!H8">Stanford</div>
-                  <div class="score"  connect="ComputedGameBlocks!J8">58</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I8">10</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H8">Stanford</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J8">58</div>                
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-left-8" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E9">2</div>
-                  <div class="school" connect="ComputedGameBlocks!D9">Kansas</div>
-                  <div class="score"  connect="ComputedGameBlocks!F9">80</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E9">2</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D9">Kansas</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F9">80</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I9">15</div>
-                  <div class="school" connect="ComputedGameBlocks!H9">Eastern Kentucky</div>
-                  <div class="score"  connect="ComputedGameBlocks!J9">69</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I9">15</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H9">Eastern Kentucky</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J9">69</div>                
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-2 tb-col tb-left-col" show-if="ComputedLayoutDecisions!B3">
+            <div class="tb-col-2 tb-col tb-left-col" show-if="SportsBracket|ComputedLayoutDecisions!B3">
               <div class="tb-empty-score"></div>
 
               <div class="tb-game sixteen-left-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E10">1</div>
-                  <div class="school" connect="ComputedGameBlocks!D10">Florida</div>
-                  <div class="score"  connect="ComputedGameBlocks!F10">61</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E10">1</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D10">Florida</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F10">61</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I10">9</div>
-                  <div class="school" connect="ComputedGameBlocks!H10">Pittsburgh</div>
-                  <div class="score"  connect="ComputedGameBlocks!J10">45</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I10">9</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H10">Pittsburgh</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J10">45</div>                
                 </div>
               </div>
 
@@ -176,14 +176,14 @@
 
               <div class="tb-game sixteen-left-2" data-final="true">
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!E11">12</div>
-                  <div class="school" connect="ComputedGameBlocks!D11">Steph. F. Austin</div>
-                  <div class="score"  connect="ComputedGameBlocks!F11">60</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E11">12</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D11">Steph. F. Austin</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F11">60</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!I11">4</div>
-                  <div class="school" connect="ComputedGameBlocks!H11">UCLA</div>
-                  <div class="score"  connect="ComputedGameBlocks!J11">77</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I11">4</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H11">UCLA</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J11">77</div>                
                 </div>
               </div>
 
@@ -193,14 +193,14 @@
 
               <div class="tb-game sixteen-left-3" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E12">11</div>
-                  <div class="school" connect="ComputedGameBlocks!D12">Dayton</div>
-                  <div class="score"  connect="ComputedGameBlocks!F12">55</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E12">11</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D12">Dayton</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F12">55</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I12">3</div>
-                  <div class="school" connect="ComputedGameBlocks!H12">Syracuse</div>
-                  <div class="score"  connect="ComputedGameBlocks!J12">53</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I12">3</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H12">Syracuse</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J12">53</div>                
                 </div>
               </div>
 
@@ -210,33 +210,33 @@
 
               <div class="tb-game sixteen-left-4" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E13">10</div>
-                  <div class="school" connect="ComputedGameBlocks!D13">Stanford</div>
-                  <div class="score"  connect="ComputedGameBlocks!F13">60</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E13">10</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D13">Stanford</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F13">60</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I13">2</div>
-                  <div class="school" connect="ComputedGameBlocks!H13">Kansas</div>
-                  <div class="score"  connect="ComputedGameBlocks!J13">57</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I13">2</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H13">Kansas</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J13">57</div>                
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-3 tb-col tb-left-col" show-if="ComputedLayoutDecisions!B4">
+            <div class="tb-col-3 tb-col tb-left-col" show-if="SportsBracket|ComputedLayoutDecisions!B4">
               <div class="tb-empty-game"></div>
 
               <div class="tb-empty-game"></div>
 
               <div class="tb-game quarter-left-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E14">1</div>
-                  <div class="school" connect="ComputedGameBlocks!D14">Florida</div>
-                  <div class="score"  connect="ComputedGameBlocks!F14">79</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E14">1</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D14">Florida</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F14">79</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I14">4</div>
-                  <div class="school" connect="ComputedGameBlocks!H14">UCLA</div>
-                  <div class="score"  connect="ComputedGameBlocks!J14">68</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I14">4</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H14">UCLA</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J14">68</div>                
                 </div>
               </div>
 
@@ -252,19 +252,19 @@
 
               <div class="tb-game quarter-left-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E15">11</div>
-                  <div class="school" connect="ComputedGameBlocks!D15">Dayton</div>
-                  <div class="score"  connect="ComputedGameBlocks!F15">82</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E15">11</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D15">Dayton</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F15">82</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I15">10</div>
-                  <div class="school" connect="ComputedGameBlocks!H15">Stanford</div>
-                  <div class="score"  connect="ComputedGameBlocks!J15">72</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I15">10</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H15">Stanford</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J15">72</div>                
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-4 tb-col tb-left-col" show-if="ComputedLayoutDecisions!B5">
+            <div class="tb-col-4 tb-col tb-left-col" show-if="SportsBracket|ComputedLayoutDecisions!B5">
               <div class="tb-empty-game"></div>
               <div class="tb-empty-game"></div>
               <div class="tb-empty-game"></div>
@@ -272,19 +272,19 @@
               <div class="tb-empty-game"></div>
               <div class="tb-game semi-left" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="seat"   connect="ComputedGameBlocks!E16">1</div>
-                  <div class="school" connect="ComputedGameBlocks!D16">Florida</div>
-                  <div class="score"  connect="ComputedGameBlocks!F16">62</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E16">1</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D16">Florida</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F16">62</div>                
                 </div>
                 <div class="tb-score">
-                  <div class="seat"   connect="ComputedGameBlocks!I16">11</div>
-                  <div class="school" connect="ComputedGameBlocks!H16">Dayton</div>
-                  <div class="score"  connect="ComputedGameBlocks!J16">52</div>                
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I16">11</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H16">Dayton</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J16">52</div>                
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-5 tb-col tb-right-col" show-if="ComputedLayoutDecisions!B6">
+            <div class="tb-col-5 tb-col tb-right-col" show-if="SportsBracket|ComputedLayoutDecisions!B6">
               <div class="tb-empty-game"></div>
               <div class="tb-empty-game"></div>
               <div class="tb-empty-game"></div>
@@ -292,35 +292,35 @@
               <div class="tb-empty-game"></div>
               <div class="tb-game semi-right" data-final="true">
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!F17">63</div>
-                  <div class="school" connect="ComputedGameBlocks!D17">Arizona</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E17">1</div>                
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F17">63</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D17">Arizona</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E17">1</div>                
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!J17">64</div>
-                  <div class="school" connect="ComputedGameBlocks!H17">Wisconsin</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I17">2</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J17">64</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H17">Wisconsin</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I17">2</div>
                   
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-6 tb-col tb-right-col" show-if="ComputedLayoutDecisions!B7">
+            <div class="tb-col-6 tb-col tb-right-col" show-if="SportsBracket|ComputedLayoutDecisions!B7">
               <div class="tb-empty-game"></div>
 
               <div class="tb-empty-game"></div>
 
               <div class="tb-game quarter-right-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F18">70</div>
-                  <div class="school" connect="ComputedGameBlocks!D18">Arizona</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E18">1</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F18">70</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D18">Arizona</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E18">1</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J18">64</div>
-                  <div class="school" connect="ComputedGameBlocks!H18">San Diego State</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I18">4</div>            
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J18">64</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H18">San Diego State</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I18">4</div>            
                 </div>
               </div>
 
@@ -336,34 +336,34 @@
 
               <div class="tb-game quarter-right-1" data-final="true">
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!F19">52</div>
-                  <div class="school" connect="ComputedGameBlocks!D19">Baylor</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E19">6</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F19">52</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D19">Baylor</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E19">6</div>
                   
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!J19">69</div>
-                  <div class="school" connect="ComputedGameBlocks!H19">Wisconsin</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I19">2</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J19">69</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H19">Wisconsin</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I19">2</div>
                   
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-7 tb-col tb-right-col" show-if="ComputedLayoutDecisions!B8">
+            <div class="tb-col-7 tb-col tb-right-col" show-if="SportsBracket|ComputedLayoutDecisions!B8">
               <div class="tb-empty-score"></div>
 
               <div class="tb-game sixteen-right-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F20">84</div>
-                  <div class="school" connect="ComputedGameBlocks!D20">Arizona</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E20">1</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F20">84</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D20">Arizona</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E20">1</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J20">61</div>
-                  <div class="school" connect="ComputedGameBlocks!H20">Gonzaga</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I20">8</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J20">61</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H20">Gonzaga</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I20">8</div>
                   
                 </div>
               </div>
@@ -374,15 +374,15 @@
 
               <div class="tb-game sixteen-right-2" data-final="true">
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!F21">64</div>
-                  <div class="school" connect="ComputedGameBlocks!D21">North Dakota St.</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E21">12</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F21">64</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D21">North Dakota St.</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E21">12</div>
                   
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!J21">63</div>
-                  <div class="school" connect="ComputedGameBlocks!H21">San Diego State</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I21">4</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J21">63</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H21">San Diego State</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I21">4</div>
                   
                 </div>
               </div>
@@ -393,15 +393,15 @@
 
               <div class="tb-game sixteen-right-3" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F22">85</div>
-                  <div class="school" connect="ComputedGameBlocks!D22">Baylor</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E22">6</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F22">85</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D22">Baylor</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E22">6</div>
                    
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J22">55</div>
-                  <div class="school" connect="ComputedGameBlocks!H22">Creighton</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I22">3</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J22">55</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H22">Creighton</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I22">3</div>
                   
                 </div>
               </div>
@@ -412,47 +412,47 @@
 
               <div class="tb-game sixteen-right-4" data-final="true">
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!F23">77</div>
-                  <div class="school" connect="ComputedGameBlocks!D23">Oregon</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E23">7</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F23">77</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D23">Oregon</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E23">7</div>
                   
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!J23">85</div>
-                  <div class="school" connect="ComputedGameBlocks!H23">Wisconsin</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I23">2</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J23">85</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H23">Wisconsin</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I23">2</div>
                   
                 </div>
               </div>
             </div>
 
-            <div class="tb-col-8 tb-col tb-right-col" show-if="ComputedLayoutDecisions!B9">
+            <div class="tb-col-8 tb-col tb-right-col" show-if="SportsBracket|ComputedLayoutDecisions!B9">
               <div class="tb-game thirtytwo-right-1" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F24">68</div>
-                  <div class="school" connect="ComputedGameBlocks!D24">Arizona</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E24">1</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F24">68</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D24">Arizona</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E24">1</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J24">59</div>
-                  <div class="school" connect="ComputedGameBlocks!H24">Weber State</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I24">16</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J24">59</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H24">Weber State</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I24">16</div>
                   
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-right-2" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F25">85</div>
-                  <div class="school" connect="ComputedGameBlocks!D25">Gonzaga</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E25">8</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F25">85</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D25">Gonzaga</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E25">8</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J25">77</div>
-                  <div class="school" connect="ComputedGameBlocks!H25">Oklahoma State</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I25">9</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J25">77</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H25">Oklahoma State</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I25">9</div>
                   
                 </div>
               </div>
@@ -461,30 +461,30 @@
 
               <div class="tb-game thirtytwo-right-3" data-final="true">
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!F26">75</div>
-                  <div class="school" connect="ComputedGameBlocks!D26">OklahomA</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E26">5</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F26">75</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D26">OklahomA</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E26">5</div>
                   
                 </div>
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!J26">80</div>
-                  <div class="school" connect="ComputedGameBlocks!H26">North Dakota St.</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I26">12</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J26">80</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H26">North Dakota St.</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I26">12</div>
                   
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-right-4" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F27">73</div>
-                  <div class="school" connect="ComputedGameBlocks!D27">San Diego State</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E27">4</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F27">73</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D27">San Diego State</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E27">4</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J27">69</div>
-                  <div class="school" connect="ComputedGameBlocks!H27">New Mexico St.</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I27">13</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J27">69</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H27">New Mexico St.</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I27">13</div>
                   
                 </div>
               </div>
@@ -493,30 +493,30 @@
 
               <div class="tb-game thirtytwo-right-5" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F28">74</div>
-                  <div class="school" connect="ComputedGameBlocks!D28">Baylor</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E28">6</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F28">74</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D28">Baylor</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E28">6</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J28">60</div>
-                  <div class="school" connect="ComputedGameBlocks!H28">Nebraska</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I28">11</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J28">60</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H28">Nebraska</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I28">11</div>
                   
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-right-6" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F29">76</div>
-                  <div class="school" connect="ComputedGameBlocks!D29">Creighton</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E29">3</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F29">76</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D29">Creighton</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E29">3</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J29">66</div>
-                  <div class="school" connect="ComputedGameBlocks!H29">La.-Lafayette</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I29">14</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J29">66</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H29">La.-Lafayette</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I29">14</div>
                   
                 </div>
               </div>
@@ -525,30 +525,30 @@
 
               <div class="tb-game thirtytwo-right-7" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F30">87</div>
-                  <div class="school" connect="ComputedGameBlocks!D30">Oregon</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E30">7</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F30">87</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D30">Oregon</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E30">7</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J30">68</div>
-                  <div class="school" connect="ComputedGameBlocks!H30">BYU</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I30">10</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J30">68</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H30">BYU</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I30">10</div>
                   
                 </div>
               </div>
 
               <div class="tb-game thirtytwo-right-8" data-final="true">
                 <div class="tb-score" data-winner="true">
-                  <div class="score"  connect="ComputedGameBlocks!F31">75</div>
-                  <div class="school" connect="ComputedGameBlocks!D31">Wisconsin</div>
-                  <div class="seat"   connect="ComputedGameBlocks!E31">2</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!F31">75</div>
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!D31">Wisconsin</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!E31">2</div>
                   
                 </div>
                 <div class="tb-score">
-                  <div class="score"  connect="ComputedGameBlocks!J31">35</div>               
-                  <div class="school" connect="ComputedGameBlocks!H31">American</div>
-                  <div class="seat"   connect="ComputedGameBlocks!I31">15</div>
+                  <div class="score"  connect="SportsBracket|ComputedGameBlocks!J31">35</div>               
+                  <div class="school" connect="SportsBracket|ComputedGameBlocks!H31">American</div>
+                  <div class="seat"   connect="SportsBracket|ComputedGameBlocks!I31">15</div>
                 </div>
               </div>
             </div>        
