@@ -3,10 +3,10 @@ Sports Bracket
 
 ## Work to be completed
 
-* FINISH CSS THEMES
-  1. themes/light.less should approximately like the photo in mock-images/light.png <br />![dark](https://github.com/cloudstitch/app-bracket/blob/master/mock-images/dark.png?raw=true = 150x)
-  2. themes/dark.less should look approximately like the photo in mock-images/dark.png
-  3. themes/ncaa.less should look approximately like the photo in mock-images/ncaa.png
+* FINISH CSS THEMES (Already half done) 
+  1. themes/light.less should approximately like the photo in mock-images/light.png <br />![dark](https://github.com/cloudstitch/app-bracket/blob/master/mock-images/light.png?raw=true = 150x)
+  2. themes/dark.less should look approximately like the photo in mock-images/dark.png <br />![dark](https://github.com/cloudstitch/app-bracket/blob/master/mock-images/dark.png?raw=true = 150x)
+  3. themes/ncaa.less should look approximately like the photo in mock-images/ncaa.png <br />![dark](https://github.com/cloudstitch/app-bracket/blob/master/mock-images/ncaa.png?raw=true = 150x)
 * CREATE THE WINNER MATCH BLOCK AND SET THE WINNER POSITION
   1. The test harness lets you toggle between three diffrent bracket sizes. `full`, `half`, and `quarter`. The bracket should be centered in its container for each of these sizes.
   2. The `full` size should have the winner match in the center bottom. The `half` and `quarter` sizes should have the winner match vertically centered to the right of the bracket
