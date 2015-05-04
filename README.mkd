@@ -4,7 +4,7 @@ Sports Bracket
 ## Work to be completed
 
 * FINISH CSS THEMES
-  1. themes/light.less should approximately like the photo in mock-images/light.png
+  1. themes/light.less should approximately like the photo in mock-images/light.png <br />![dark](https://github.com/cloudstitch/app-bracket/blob/master/mock-images/dark.png?raw=true = 250)
   2. themes/dark.less should look approximately like the photo in mock-images/dark.png
   3. themes/ncaa.less should look approximately like the photo in mock-images/ncaa.png
 * CREATE THE WINNER MATCH BLOCK AND SET THE WINNER POSITION
