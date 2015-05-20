@@ -1,0 +1,375 @@
+/*_____________ Mixins _____________*/
+.pane_bg (@color_1, @color_2, @color_3, @color_4) {
+	background: @color_1;
+	background: -moz-linear-gradient(top,  @color_1 0%, @color_2 49%, @color_3 49%, @color_4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color_1), color-stop(49%,@color_2), color-stop(49%,@color_3), color-stop(100%,@color_4));
+	background: -webkit-linear-gradient(top,  @color_1 0%,@color_2 49%,@color_3 49%,@color_4 100%);
+	background: -o-linear-gradient(top,  @color_1 0%,@color_2 49%,@color_3 49%,@color_4 100%);
+	background: -ms-linear-gradient(top,  @color_1 0%,@color_2 49%,@color_3 49%,@color_4 100%);
+	background: linear-gradient(to bottom,  @color_1 0%,@color_2 49%,@color_3 49%,@color_4 100%);
+}
+
+/*_____________ End Mixins _____________*/
+
+/*_____________ Helpers _____________*/
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*_____________ END Helpers _____________*/
+
+/*_____________ Global Styles _____________*/
+html,
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+.container {
+	margin: 0 auto;
+}
+.bracket_holder {
+/*	margin-top: 50px;*/
+	position: relative;
+}
+
+.bracket_col {
+	float: left;
+}
+.bracket_team {
+	border-radius: 15px;
+}
+.bracket_team-seat,
+.bracket_team-school,
+.bracket_team-score {
+	cursor: default;
+}
+.light_logo {
+	display: none;
+}
+/*_____________ END Global Styles _____________*/
+
+/*_____________ Skin Defaults _____________*/
+@light_pane_gradient_1: #F9F9FA;
+@light_pane_gradient_2: #EFF0F1;
+@light_pane_gradient_3: #E2E3E4;
+@light_pane_gradient_4: #CACACC;
+
+@light_left_team_gradient_1: #7DC2EB;
+@light_left_team_gradient_2: #5A92BD;
+@light_left_team_gradient_3: #2C7BAA;
+@light_left_team_gradient_4: #095082;
+
+@light_left_team_seat_color: #FFFFFF;
+@light_left_team_score_color: #0f75bc;
+
+@light_right_team_gradient_1: #70A86C;
+@light_right_team_gradient_2: #6CA06E;
+@light_right_team_gradient_3: #168742;
+@light_right_team_gradient_4: #046D3B;
+
+@light_right_team_seat_color: #FFFFFF;
+@light_right_team_score_color: #45AC71;
+
+@light_bracket_col_default_width: 130px;
+@light_bracket_col_default_padd: 20px;
+
+@light_bracket_team_default_height: 22px;
+@light_bracket_team_default_margin_bottom: 6px;
+
+@light_container_pad_v: 20px;
+@light_container_pad_h: 10px;
+
+@light_neg_margin: 50px;
+/*_____________ END Skin Defaults _____________*/
+
+
+.theme_light {
+	background: radial-gradient(#f4f4f8, #ced6df);
+
+	&.container {
+		width: ( @light_bracket_col_default_width * 8 ) + ( @light_bracket_col_default_padd * 4 ) + ( @light_container_pad_h * 2 ) - ( @light_neg_margin * 2 );
+	}
+	
+	.bracket_holder {
+		background: transparent url(../img/layout/light_bg.png) no-repeat center bottom;
+		padding: @light_container_pad_v @light_container_pad_h;
+	}
+
+	.bracket_col {
+
+		&._game_thirtytwo {
+			width: @light_bracket_col_default_width + @light_bracket_col_default_padd;
+			padding-right: @light_bracket_col_default_padd;
+
+			&._left_side {
+				padding-right: 0;
+				padding-left: @light_bracket_col_default_padd;
+			}
+		}
+		&._game_sixteen {
+			width: @light_bracket_col_default_width;
+			padding-top: @light_bracket_team_default_margin_bottom + @light_bracket_team_default_height;
+
+			.bracket_game {
+				margin-bottom: ( @light_bracket_team_default_height * 4 ) + ( @light_bracket_team_default_margin_bottom * 5 );
+			}
+		}
+		&._game_quarter {
+			width: @light_bracket_col_default_width;
+			padding-top: ( @light_bracket_team_default_height * 4 ) + ( @light_bracket_team_default_margin_bottom * 4 );
+
+			.bracket_game {
+				margin-bottom: ( @light_bracket_team_default_height * 10 ) + ( @light_bracket_team_default_margin_bottom * 11 );
+			}
+		}
+		&._game_semi {
+			width: @light_bracket_col_default_width;
+			padding-top: ( @light_bracket_team_default_height * 10 ) + ( @light_bracket_team_default_margin_bottom * 10 );
+			margin-left: -(@light_neg_margin);
+
+			&._left_side {
+				margin-left: @light_bracket_col_default_padd * 2;
+				margin-right: -(@light_neg_margin);
+			}
+
+			.bracket_team._winner:after {
+				background: transparent url(../img/layout/light_final_winner.png) no-repeat 0 0;
+				right: 23px;
+			}
+		}
+	}
+
+	.bracket_game {
+		margin-bottom: ( @light_bracket_team_default_height * 2 ) + ( @light_bracket_team_default_margin_bottom * 3 );
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.bracket_team {
+		position: relative;
+		height: @light_bracket_team_default_height;
+		.pane_bg(@light_pane_gradient_1, @light_pane_gradient_2, @light_pane_gradient_3, @light_pane_gradient_4);
+		margin-bottom: @light_bracket_team_default_margin_bottom;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._winner:after {
+			content: "";
+			width: 19px;
+			height: 18px;
+			background: transparent url(../img/layout/light_winner.png) no-repeat 0 0;
+			display: block;
+			position: absolute;
+			top: 2px;
+			right: -23px;
+			z-index: 5;
+		}
+	}
+	.bracket_team-seat {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		width: 32px;
+		text-align: center;
+		font-size: 14px;
+		border-radius: 15px 0 0 15px;
+		height: @light_bracket_team_default_height;
+		line-height: @light_bracket_team_default_height;
+		color: @light_left_team_seat_color;
+		.pane_bg(@light_left_team_gradient_1, @light_left_team_gradient_2, @light_left_team_gradient_3, @light_left_team_gradient_4);
+	}
+	.bracket_team-school {
+		margin: 0 20px 0 35px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: @light_bracket_team_default_height;
+		height: @light_bracket_team_default_height;
+	}
+	.bracket_team-score {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		width: 20px;
+		height: @light_bracket_team_default_height;
+		line-height: @light_bracket_team_default_height;
+		color: @light_left_team_score_color;
+	}
+
+	._left_side {
+		
+		.bracket_team._winner:after {
+			left: -23px;
+			right: auto;
+		}
+		&._game_semi .bracket_team._winner:after {
+			left: 23px;
+			right: auto;
+		}
+		.bracket_team-seat {
+			right: 0;
+			left: auto;
+			border-radius: 0 15px 15px 0;
+			color: @light_right_team_seat_color;
+			.pane_bg(@light_right_team_gradient_1, @light_right_team_gradient_2, @light_right_team_gradient_3, @light_right_team_gradient_4);
+		}
+		.bracket_team-school {
+			text-align: right;
+			margin: 0 35px 0 20px;
+		}
+		.bracket_team-score {
+			left: 0;
+			right: auto;
+			text-align: right;
+			color: @light_right_team_score_color;
+		}
+	}
+	
+
+	.bracket_game:after {
+		position: absolute;
+		z-index: 5;
+		content: "";
+		display: block;
+	}
+	._game_sixteen {
+		.bracket_game:after {
+			border: 2px dashed #fff;
+			border-left: 0;
+			height: ( @light_bracket_team_default_height * 2 ) + ( @light_bracket_team_default_margin_bottom * 2 );
+			width: @light_bracket_col_default_width - ( @light_bracket_col_default_padd * 3 );
+			left: ( @light_bracket_col_default_width * 2 ) + ( @light_bracket_col_default_padd * 1.5 );
+		}
+		.bracket_game:first-child:after {
+			top: ( @light_bracket_team_default_height * 2 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 1.3 );
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @light_bracket_team_default_height * 6 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 5.6 );
+		}
+		.bracket_game:nth-child(3):after {
+			top: ( @light_bracket_team_default_height * 14 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 13.3 );
+		}
+		.bracket_game:nth-child(4):after {
+			top: ( @light_bracket_team_default_height * 18 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 18 );
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @light_bracket_col_default_width * 2 ) + ( @light_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 2px dashed #fff;
+				border-right: 0;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	._game_quarter {
+		.bracket_game:after {
+			border: 2px dashed #fff;
+			border-left: 0;
+			height: ( @light_bracket_team_default_height * 5 ) + ( @light_bracket_team_default_margin_bottom * 5 );
+			width: @light_bracket_col_default_width - ( @light_bracket_col_default_padd * 3 ) - @light_neg_margin;
+			left: ( @light_bracket_col_default_width * 3 ) + ( @light_bracket_col_default_padd * 1.5 );
+		}
+		.bracket_game:first-child:after {
+			top: ( @light_bracket_team_default_height * 5 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 4.6 );
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @light_bracket_team_default_height * 12 ) + @light_container_pad_v + ( @light_bracket_team_default_margin_bottom * 11.6 );
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @light_bracket_col_default_width * 3 ) + ( @light_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 2px dashed #fff;
+				border-right: 0;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+	.light_logo {
+		width: 253px;
+		height: 126px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -126px;
+		top: 5px;
+		z-index: 5;
+	}
+
+	._game_quarter:after {
+		content: "";
+		display: block;
+		background: transparent url(../img/layout/light_south.png) no-repeat right center;
+		top: 50%;
+		position: absolute;
+		width: @light_bracket_col_default_width * 1.5;
+		height: @light_bracket_team_default_height * 4;
+		margin-top: -(@light_bracket_team_default_height * 2);
+		left: @light_bracket_col_default_width + ( @light_bracket_col_default_padd *2 );
+	}
+	._game_quarter._left_side:after {
+			left: auto;
+			right: @light_bracket_col_default_width + ( @light_bracket_col_default_padd *2 );
+			background: transparent url(../img/layout/light_west.png) no-repeat left center;
+		}
+}
+
