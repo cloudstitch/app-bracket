@@ -28,17 +28,60 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div id="main_wrapper" class="wrapper">
+
+  <div class="bracket_options clearfix" style="text-align: center;">
+    <div style="display: inline-block; vertical-align: top; margin: 15px 20px;">
+      <label>
+        Select Theme
+      </label>
+      <select id="select_theme">
+        <option value="theme_light">Light Theme</option>
+        <option value="theme_dark">Dark Theme</option>
+        <option value="theme_ncaa">NCAA Theme</option>
+      </select>
+    </div>
+    <div style="display: inline-block; vertical-align: top; margin: 15px 20px;">
+      <label>
+        Select Bracket
+      </label>
+      <select id="select_bracket">
+        <option value="bracket_1">Bracket 1</option>
+        <option value="bracket_2">Bracket 2</option>
+        <option value="bracket_3">Bracket 3</option>
+      </select>
+    </div>
+  </div>
 
   <div class="content">
-    <div class="container theme_light">
+    <div id="main_container" class="container theme_light">
       <div class="bracket_holder clearfix">
       
-        <div class="light_logo"><img src="img/layout/light_logo.png" alt=""></div>
+        <div class="logo"></div>
+
+        <div class="ncaa_actions">
+          All Time Eastern
+          <div class="links">
+            <a href="#">
+              <img src="img/layout/ncaa/fb.png" alt="">
+            </a>
+            <a href="#">
+              <img src="img/layout/ncaa/tw.png" alt="">
+            </a>
+            <a href="#">
+              <img src="img/layout/ncaa/gp.png" alt="">
+            </a>
+          </div>
+          <div class="links">
+            <a href="#">
+              <img src="img/layout/ncaa/printable.png" alt="">
+            </a>
+          </div>
+        </div>
 
         <div class="bracket_col _game_thirtytwo">
           <div class="bracket_game">
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">67</div>
               <div class="bracket_team-school">Florida</div>
               <div class="bracket_team-score">55</div>
@@ -53,7 +96,7 @@
               <div class="bracket_team-school">Colorado</div>
               <div class="bracket_team-score">48</div>
             </div><!-- .bracket_team -->
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">9</div>
               <div class="bracket_team-school">Pittsburgh</div>
               <div class="bracket_team-score">77</div>
@@ -65,12 +108,34 @@
               <div class="bracket_team-school">Florida</div>
               <div class="bracket_team-score">55</div>
             </div><!-- .bracket_team -->
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">16</div>
               <div class="bracket_team-school">Albany</div>
               <div class="bracket_team-score">55</div>
             </div><!-- .bracket_team -->
             <div class="bracket_team">
+              <div class="bracket_team-seat">8</div>
+              <div class="bracket_team-school">Colorado</div>
+              <div class="bracket_team-score">48</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">9</div>
+              <div class="bracket_team-school">Pittsburgh</div>
+              <div class="bracket_team-score">77</div>
+            </div><!-- .bracket_team -->
+          </div><!-- .bracket_game -->
+          <div class="bracket_game">
+            <div class="bracket_team">
+              <div class="bracket_team-seat">67</div>
+              <div class="bracket_team-school">Florida</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">16</div>
+              <div class="bracket_team-school">Albany</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">8</div>
               <div class="bracket_team-school">Colorado</div>
               <div class="bracket_team-score">48</div>
@@ -82,7 +147,7 @@
             </div><!-- .bracket_team -->
           </div><!-- .bracket_game -->
           <div class="bracket_game">
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">67</div>
               <div class="bracket_team-school">Florida</div>
               <div class="bracket_team-score">55</div>
@@ -97,29 +162,7 @@
               <div class="bracket_team-school">Colorado</div>
               <div class="bracket_team-score">48</div>
             </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">9</div>
-              <div class="bracket_team-school">Pittsburgh</div>
-              <div class="bracket_team-score">77</div>
-            </div><!-- .bracket_team -->
-          </div><!-- .bracket_game -->
-          <div class="bracket_game">
-            <div class="bracket_team">
-              <div class="bracket_team-seat">67</div>
-              <div class="bracket_team-school">Florida</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">16</div>
-              <div class="bracket_team-school">Albany</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">8</div>
-              <div class="bracket_team-school">Colorado</div>
-              <div class="bracket_team-score">48</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">9</div>
               <div class="bracket_team-school">Pittsburgh</div>
               <div class="bracket_team-score">77</div>
@@ -320,12 +363,56 @@
               <div class="bracket_team-school">Florida</div>
               <div class="bracket_team-score">55</div>
             </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">16</div>
+              <div class="bracket_team-school">Albany</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">8</div>
+              <div class="bracket_team-school">Colorado</div>
+              <div class="bracket_team-score">48</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team">
+              <div class="bracket_team-seat">9</div>
+              <div class="bracket_team-school">Pittsburgh</div>
+              <div class="bracket_team-score">77</div>
+            </div><!-- .bracket_team -->
+          </div><!-- .bracket_game -->
+          <div class="bracket_game">
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">67</div>
+              <div class="bracket_team-school">Florida</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
             <div class="bracket_team">
               <div class="bracket_team-seat">16</div>
               <div class="bracket_team-school">Albany</div>
               <div class="bracket_team-score">55</div>
             </div><!-- .bracket_team -->
             <div class="bracket_team">
+              <div class="bracket_team-seat">8</div>
+              <div class="bracket_team-school">Colorado</div>
+              <div class="bracket_team-score">48</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">9</div>
+              <div class="bracket_team-school">Pittsburgh</div>
+              <div class="bracket_team-score">77</div>
+            </div><!-- .bracket_team -->
+          </div><!-- .bracket_game -->
+          <div class="bracket_game">
+            <div class="bracket_team _winner">
+              <div class="bracket_team-seat">67</div>
+              <div class="bracket_team-school">Florida</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team">
+              <div class="bracket_team-seat">16</div>
+              <div class="bracket_team-school">Albany</div>
+              <div class="bracket_team-score">55</div>
+            </div><!-- .bracket_team -->
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">8</div>
               <div class="bracket_team-school">Colorado</div>
               <div class="bracket_team-score">48</div>
@@ -342,7 +429,7 @@
               <div class="bracket_team-school">Florida</div>
               <div class="bracket_team-score">55</div>
             </div><!-- .bracket_team -->
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">16</div>
               <div class="bracket_team-school">Albany</div>
               <div class="bracket_team-score">55</div>
@@ -352,51 +439,7 @@
               <div class="bracket_team-school">Colorado</div>
               <div class="bracket_team-score">48</div>
             </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">9</div>
-              <div class="bracket_team-school">Pittsburgh</div>
-              <div class="bracket_team-score">77</div>
-            </div><!-- .bracket_team -->
-          </div><!-- .bracket_game -->
-          <div class="bracket_game">
-            <div class="bracket_team">
-              <div class="bracket_team-seat">67</div>
-              <div class="bracket_team-school">Florida</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">16</div>
-              <div class="bracket_team-school">Albany</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">8</div>
-              <div class="bracket_team-school">Colorado</div>
-              <div class="bracket_team-score">48</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">9</div>
-              <div class="bracket_team-school">Pittsburgh</div>
-              <div class="bracket_team-score">77</div>
-            </div><!-- .bracket_team -->
-          </div><!-- .bracket_game -->
-          <div class="bracket_game">
-            <div class="bracket_team">
-              <div class="bracket_team-seat">67</div>
-              <div class="bracket_team-school">Florida</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">16</div>
-              <div class="bracket_team-school">Albany</div>
-              <div class="bracket_team-score">55</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
-              <div class="bracket_team-seat">8</div>
-              <div class="bracket_team-school">Colorado</div>
-              <div class="bracket_team-score">48</div>
-            </div><!-- .bracket_team -->
-            <div class="bracket_team">
+            <div class="bracket_team _winner">
               <div class="bracket_team-seat">9</div>
               <div class="bracket_team-school">Pittsburgh</div>
               <div class="bracket_team-score">77</div>

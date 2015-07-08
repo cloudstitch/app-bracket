@@ -1,0 +1,450 @@
+/*_____________ Skin Defaults _____________*/
+/*@ncaa_pane_gradient_1: #F9F9FA;
+@ncaa_pane_gradient_2: #EFF0F1;
+@ncaa_pane_gradient_3: #E2E3E4;
+@ncaa_pane_gradient_4: #CACACC;*/
+
+/*@ncaa_left_team_gradient_1: #7DC2EB;
+@ncaa_left_team_gradient_2: #5A92BD;
+@ncaa_left_team_gradient_3: #2C7BAA;
+@ncaa_left_team_gradient_4: #095082;*/
+
+@ncaa_left_team_seat_color: #8B8B8B;
+@ncaa_left_team_score_color: #8B8B8B;
+
+/*@ncaa_right_team_gradient_1: #70A86C;
+@ncaa_right_team_gradient_2: #6CA06E;
+@ncaa_right_team_gradient_3: #168742;
+@ncaa_right_team_gradient_4: #046D3B;*/
+
+@ncaa_right_team_seat_color: #8B8B8B;
+@ncaa_right_team_score_color: #8B8B8B;
+
+@ncaa_bracket_col_default_width: 130px;
+@ncaa_bracket_col_default_padd: 20px;
+
+@ncaa_bracket_team_default_height: 28px;
+@ncaa_bracket_team_default_margin_bottom: 28px;
+
+@ncaa_container_pad_v: 20px;
+@ncaa_container_pad_h: 10px;
+@ncaa_container_pad_b: 40px;
+
+@ncaa_neg_margin: 50px;
+/*_____________ END Skin Defaults _____________*/
+
+
+.theme_ncaa {
+	background: #EFEDEE;
+
+	&.container {
+		width: ( @ncaa_bracket_col_default_width * 8 ) + ( @ncaa_bracket_col_default_padd * 4 ) + ( @ncaa_container_pad_h * 2 ) - ( @ncaa_neg_margin * 2 );
+	}
+
+	.bracket_team {
+		border-radius: 0;
+		border: 1px solid #E0DEDF;
+	}
+	
+	.bracket_holder {
+		background: transparent url(../img/layout/ncaa/bg.png) no-repeat center bottom;
+		padding: @ncaa_container_pad_v @ncaa_container_pad_h;
+		padding-bottom: @ncaa_container_pad_b;
+	}
+
+	.bracket_col {
+
+		&._game_thirtytwo {
+			width: @ncaa_bracket_col_default_width + @ncaa_bracket_col_default_padd;
+			padding-right: @ncaa_bracket_col_default_padd;
+
+			&._left_side {
+				padding-right: 0;
+				padding-left: @ncaa_bracket_col_default_padd;
+			}
+		}
+		&._game_sixteen {
+			width: @ncaa_bracket_col_default_width;
+			padding-top: @ncaa_bracket_team_default_height * 1.5;
+
+			.bracket_game {
+				margin-bottom: ( @ncaa_bracket_team_default_height * 4 );
+			}
+		}
+		&._game_quarter {
+			width: @ncaa_bracket_col_default_width;
+			padding-top: ( @ncaa_bracket_team_default_height * 4.5 );
+
+			.bracket_game {
+				margin-bottom: ( @ncaa_bracket_team_default_height * 10 );
+			}
+		}
+		&._game_semi {
+			width: @ncaa_bracket_col_default_width;
+			padding-top: ( @ncaa_bracket_team_default_height * 10.5 );
+			margin-left: -(@ncaa_neg_margin);
+
+			&._left_side {
+				margin-left: @ncaa_bracket_col_default_padd * 2;
+				margin-right: -(@ncaa_neg_margin);
+			}
+
+			.bracket_team._winner:after {
+				/*background: transparent url(../img/layout/dark/final_winner.png) no-repeat 0 0;*/
+				right: 2px;
+			}
+		}
+		.bracket_team._winner {
+			.bracket_team-seat,
+			.bracket_team-school,
+			.bracket_team-score {
+				color: #0c2869 !important;
+			}
+		}
+	}
+
+	.bracket_game {
+		margin-bottom: @ncaa_bracket_team_default_height;
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.bracket_team {
+		position: relative;
+		height: @ncaa_bracket_team_default_height;
+		/*.pane_bg(@ncaa_pane_gradient_1, @ncaa_pane_gradient_2, @ncaa_pane_gradient_3, @ncaa_pane_gradient_4);*/
+		margin-bottom: @ncaa_bracket_team_default_margin_bottom;
+		background: #fff;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:nth-child(odd){
+			margin-bottom: 0;
+		}
+
+		&._winner:after {
+			content: "";
+			width: 0;
+			height: 0;
+			/*background: transparent url(../img/layout/dark/winner.png) no-repeat 0 0;*/
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 2px;
+			z-index: 5;
+			margin-top: -5px;
+			border-right: 6px solid #0C2869;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+		}
+	}
+	.bracket_team-seat {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		width: 32px;
+		text-align: center;
+		font-size: 12px;
+		border-radius: 0;
+		height: @ncaa_bracket_team_default_height;
+		line-height: @ncaa_bracket_team_default_height - 2;
+		color: @ncaa_left_team_seat_color;
+		/*.pane_bg(@ncaa_left_team_gradient_1, @ncaa_left_team_gradient_2, @ncaa_left_team_gradient_3, @ncaa_left_team_gradient_4);*/
+	}
+	.bracket_team-school {
+		margin: 0 30px 0 35px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-weight: bold;
+		color: #8B8B8B;
+		line-height: @ncaa_bracket_team_default_height - 2;
+		height: @ncaa_bracket_team_default_height;
+	}
+	.bracket_team-score {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		width: 30px;
+		font-weight: bold;
+		font-size: 14px;
+		height: @ncaa_bracket_team_default_height;
+		line-height: @ncaa_bracket_team_default_height - 2;
+		color: @ncaa_left_team_score_color;
+	}
+
+	._left_side {
+		
+		.bracket_team._winner:after {
+			left: 2px;
+			right: auto;
+			border-left: 6px solid #0C2869;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 0;
+		}
+		&._game_semi .bracket_team._winner:after {
+			left: 2px;
+			right: auto;
+		}
+		.bracket_team-seat {
+			right: 0;
+			left: auto;
+			border-radius: 0 15px 15px 0;
+			color: @ncaa_right_team_seat_color;
+			/*.pane_bg(@ncaa_right_team_gradient_1, @ncaa_right_team_gradient_2, @ncaa_right_team_gradient_3, @ncaa_right_team_gradient_4);*/
+		}
+		.bracket_team-school {
+			text-align: right;
+			margin: 0 35px 0 20px;
+		}
+		.bracket_team-score {
+			left: 0;
+			right: auto;
+			text-align: right;
+			color: @ncaa_right_team_score_color;
+		}
+	}
+	
+
+	.bracket_game:after {
+		position: absolute;
+		z-index: 5;
+		content: "";
+		display: block;
+	}
+	
+	._game_thirtytwo {
+		.bracket_game:after {
+			border: 1px solid #D0D0D0;
+			box-shadow: 1px 0 0 #fff, inset 0 1px 0 #fff;
+			background: transparent;
+			border-left: 0;
+			border-bottom: 0;
+			height: ( @ncaa_bracket_team_default_height * 0.5 );
+			width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 );
+			left: @ncaa_bracket_col_default_width + @ncaa_container_pad_h;
+		}
+		.bracket_game:first-child:after {
+			top: ( @ncaa_bracket_team_default_height * 1 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @ncaa_bracket_team_default_height * 7 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(3):after {
+			top: ( @ncaa_bracket_team_default_height * 13 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(4):after {
+			top: ( @ncaa_bracket_team_default_height * 19 ) + @ncaa_container_pad_v - 1;
+		}
+
+		.bracket_game:before {
+			border: 1px solid #D0D0D0;
+			box-shadow: 1px 1px 0 #fff;
+			background: transparent;
+			border-top: 0;
+			border-left: 0;
+			height: ( @ncaa_bracket_team_default_height * 0.5 );
+			width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 );
+			left: @ncaa_bracket_col_default_width + @ncaa_container_pad_h;
+			content: "";
+			position: absolute;
+		}
+		.bracket_game:first-child:before {
+			top: ( @ncaa_bracket_team_default_height * 3.5 ) + @ncaa_container_pad_v;
+		}
+		.bracket_game:nth-child(2):before {
+			top: ( @ncaa_bracket_team_default_height * 9.5 ) + @ncaa_container_pad_v;
+		}
+		.bracket_game:nth-child(3):before {
+			top: ( @ncaa_bracket_team_default_height * 15.5 ) + @ncaa_container_pad_v;
+		}
+		.bracket_game:nth-child(4):before {
+			top: ( @ncaa_bracket_team_default_height * 21.5 ) + @ncaa_container_pad_v;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				border: 1px solid #D0D0D0;
+				box-shadow: inset 1px 1px 0 #fff;
+				background: transparent;
+				border-right: 0;
+				border-bottom: 0;
+				height: ( @ncaa_bracket_team_default_height * 0.5 );
+				width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 );
+				right: @ncaa_bracket_col_default_width + @ncaa_container_pad_h;
+				left: auto;
+			}
+
+			.bracket_game:before {
+				border: 1px solid #D0D0D0;
+				box-shadow: 1px 1px 0 #fff, inset 1px 0 0 #fff;
+				background: transparent;
+				border-top: 0;
+				border-right: 0;
+				height: ( @ncaa_bracket_team_default_height * 0.5 );
+				width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 );
+				right: @ncaa_bracket_col_default_width + @ncaa_container_pad_h;
+				left: auto;
+				content: "";
+				position: absolute;
+			}
+			.bracket_game:first-child:before {
+				top: ( @ncaa_bracket_team_default_height * 3.5 ) + @ncaa_container_pad_v;
+			}
+			.bracket_game:nth-child(2):before {
+				top: ( @ncaa_bracket_team_default_height * 9.5 ) + @ncaa_container_pad_v;
+			}
+			.bracket_game:nth-child(3):before {
+				top: ( @ncaa_bracket_team_default_height * 15.5 ) + @ncaa_container_pad_v;
+			}
+			.bracket_game:nth-child(4):before {
+				top: ( @ncaa_bracket_team_default_height * 21.5 ) + @ncaa_container_pad_v;
+			}
+		}
+	}
+
+	._game_sixteen {
+		.bracket_game:after {
+			border: 1px solid #D0D0D0;
+			box-shadow: 1px 0 0 #fff, inset 0 1px 0 #fff;
+			background: transparent;
+			border-left: 0;
+			height: ( @ncaa_bracket_team_default_height * 2 );
+			width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 );
+			left: ( @ncaa_bracket_col_default_width * 2 ) + ( @ncaa_bracket_col_default_padd * 1.5 );
+		}
+		.bracket_game:first-child:after {
+			top: ( @ncaa_bracket_team_default_height * 2.5 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @ncaa_bracket_team_default_height * 6.5 ) + @ncaa_container_pad_v;
+			box-shadow: 1px 1px 0 #fff;
+		}
+		.bracket_game:nth-child(3):after {
+			top: ( @ncaa_bracket_team_default_height * 14.5 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(4):after {
+			top: ( @ncaa_bracket_team_default_height * 18.5 ) + @ncaa_container_pad_v;
+			box-shadow: 1px 1px 0 #fff;
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @ncaa_bracket_col_default_width * 2 ) + ( @ncaa_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 1px solid #D0D0D0;
+				border-right: 0;
+				box-shadow: inset 1px 1px 0 #fff;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+				box-shadow: inset 1px 0 0 #fff, 0 1px 0 #fff;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	._game_quarter {
+		.bracket_game:after {
+			border: 1px solid #D0D0D0;
+			border-left: 0;
+			height: ( @ncaa_bracket_team_default_height * 5 );
+			width: @ncaa_bracket_col_default_width - ( @ncaa_bracket_col_default_padd * 3 ) - @ncaa_neg_margin;
+			left: ( @ncaa_bracket_col_default_width * 3 ) + ( @ncaa_bracket_col_default_padd * 1.5 );
+			box-shadow: inset 0 1px 0 #fff, 1px 0 0 #fff;
+		}
+		.bracket_game:first-child:after {
+			top: ( @ncaa_bracket_team_default_height * 5.5 ) + @ncaa_container_pad_v - 1;
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @ncaa_bracket_team_default_height * 12.5 ) + @ncaa_container_pad_v;
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+			box-shadow: 1px 1px 0 #fff;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @ncaa_bracket_col_default_width * 3 ) + ( @ncaa_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 1px solid #D0D0D0;
+				border-right: 0;
+				box-shadow: inset 1px 1px 0 #fff;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+				box-shadow: inset 1px 0 0 #fff, 0 1px 0 #fff;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+	.logo {
+		display: none;
+	}
+
+	._game_quarter:after {
+		content: "";
+		display: block;
+		background: transparent url(../img/layout/ncaa/south.png) no-repeat right center;
+		top: 50%;
+		position: absolute;
+		width: @ncaa_bracket_col_default_width * 1.5;
+		height: @ncaa_bracket_team_default_height * 4;
+		margin-top: -( ( @ncaa_bracket_team_default_height * 2 ) + ( @ncaa_container_pad_b / 2 ) - ( @ncaa_container_pad_v / 2 ) );
+		left: @ncaa_bracket_col_default_width + ( @ncaa_bracket_col_default_padd *2 );
+	}
+	._game_quarter._left_side:after {
+		left: auto;
+		right: @ncaa_bracket_col_default_width + ( @ncaa_bracket_col_default_padd *2 );
+		background: transparent url(../img/layout/ncaa/west.png) no-repeat left center;
+	}
+
+	.ncaa_actions {
+		display: block;
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		top: 60px;
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+		color: #0c2869;
+
+		.links {
+			margin-top: 5px;
+
+			a {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 4px;
+			}
+		}
+	}
+}

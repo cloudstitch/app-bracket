@@ -1,0 +1,303 @@
+/*_____________ Skin Defaults _____________*/
+@dark_pane_gradient_1: #F9F9FA;
+@dark_pane_gradient_2: #EFF0F1;
+@dark_pane_gradient_3: #E2E3E4;
+@dark_pane_gradient_4: #CACACC;
+
+@dark_left_team_gradient_1: #7DC2EB;
+@dark_left_team_gradient_2: #5A92BD;
+@dark_left_team_gradient_3: #2C7BAA;
+@dark_left_team_gradient_4: #095082;
+
+@dark_left_team_seat_color: #FFFFFF;
+@dark_left_team_score_color: #0f75bc;
+
+@dark_right_team_gradient_1: #70A86C;
+@dark_right_team_gradient_2: #6CA06E;
+@dark_right_team_gradient_3: #168742;
+@dark_right_team_gradient_4: #046D3B;
+
+@dark_right_team_seat_color: #FFFFFF;
+@dark_right_team_score_color: #45AC71;
+
+@dark_bracket_col_default_width: 130px;
+@dark_bracket_col_default_padd: 25px;
+
+@dark_bracket_team_default_height: 22px;
+@dark_bracket_team_default_margin_bottom: 6px;
+
+@dark_container_pad_v: 20px;
+@dark_container_pad_h: 10px;
+@dark_container_pad_b: 140px;
+
+@dark_neg_margin: 50px;
+/*_____________ END Skin Defaults _____________*/
+
+
+.theme_dark {
+	background: radial-gradient(#454441, #1A1B1B);
+
+	&.container {
+		width: ( @dark_bracket_col_default_width * 8 ) + ( @dark_bracket_col_default_padd * 4 ) + ( @dark_container_pad_h * 2 ) - ( @dark_neg_margin * 2 );
+	}
+	
+	.bracket_holder {
+		background: transparent url(../img/layout/dark/bg.png) no-repeat center bottom;
+		padding: @dark_container_pad_v @dark_container_pad_h;
+		padding-bottom: @dark_container_pad_b;
+	}
+
+	.bracket_col {
+
+		&._game_thirtytwo {
+			width: @dark_bracket_col_default_width + @dark_bracket_col_default_padd;
+			padding-right: @dark_bracket_col_default_padd;
+
+			&._left_side {
+				padding-right: 0;
+				padding-left: @dark_bracket_col_default_padd;
+			}
+		}
+		&._game_sixteen {
+			width: @dark_bracket_col_default_width;
+			padding-top: @dark_bracket_team_default_margin_bottom + @dark_bracket_team_default_height;
+
+			.bracket_game {
+				margin-bottom: ( @dark_bracket_team_default_height * 4 ) + ( @dark_bracket_team_default_margin_bottom * 5 );
+			}
+		}
+		&._game_quarter {
+			width: @dark_bracket_col_default_width;
+			padding-top: ( @dark_bracket_team_default_height * 4 ) + ( @dark_bracket_team_default_margin_bottom * 4 );
+
+			.bracket_game {
+				margin-bottom: ( @dark_bracket_team_default_height * 10 ) + ( @dark_bracket_team_default_margin_bottom * 11 );
+			}
+		}
+		&._game_semi {
+			width: @dark_bracket_col_default_width;
+			padding-top: ( @dark_bracket_team_default_height * 10 ) + ( @dark_bracket_team_default_margin_bottom * 10 );
+			margin-left: -(@dark_neg_margin);
+
+			&._left_side {
+				margin-left: @dark_bracket_col_default_padd * 2;
+				margin-right: -(@dark_neg_margin);
+			}
+
+			.bracket_team._winner:after {
+				background: transparent url(../img/layout/dark/final_winner.png) no-repeat 0 0;
+				right: 23px;
+			}
+		}
+	}
+
+	.bracket_game {
+		margin-bottom: ( @dark_bracket_team_default_height * 2 ) + ( @dark_bracket_team_default_margin_bottom * 3 );
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.bracket_team {
+		position: relative;
+		height: @dark_bracket_team_default_height;
+		.pane_bg(@dark_pane_gradient_1, @dark_pane_gradient_2, @dark_pane_gradient_3, @dark_pane_gradient_4);
+		margin-bottom: @dark_bracket_team_default_margin_bottom;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._winner:after {
+			content: "";
+			width: 19px;
+			height: 18px;
+			background: transparent url(../img/layout/dark/winner.png) no-repeat 0 0;
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: -23px;
+			z-index: 5;
+			margin-top: -9px;
+		}
+	}
+	.bracket_team-seat {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		width: 32px;
+		text-align: center;
+		font-size: 14px;
+		border-radius: 15px 0 0 15px;
+		height: @dark_bracket_team_default_height;
+		line-height: @dark_bracket_team_default_height;
+		color: @dark_left_team_seat_color;
+		.pane_bg(@dark_left_team_gradient_1, @dark_left_team_gradient_2, @dark_left_team_gradient_3, @dark_left_team_gradient_4);
+	}
+	.bracket_team-school {
+		margin: 0 20px 0 35px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: @dark_bracket_team_default_height;
+		height: @dark_bracket_team_default_height;
+	}
+	.bracket_team-score {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		width: 20px;
+		height: @dark_bracket_team_default_height;
+		line-height: @dark_bracket_team_default_height;
+		color: @dark_left_team_score_color;
+	}
+
+	._left_side {
+		
+		.bracket_team._winner:after {
+			left: -23px;
+			right: auto;
+		}
+		&._game_semi .bracket_team._winner:after {
+			left: 23px;
+			right: auto;
+		}
+		.bracket_team-seat {
+			right: 0;
+			left: auto;
+			border-radius: 0 15px 15px 0;
+			color: @dark_right_team_seat_color;
+			.pane_bg(@dark_right_team_gradient_1, @dark_right_team_gradient_2, @dark_right_team_gradient_3, @dark_right_team_gradient_4);
+		}
+		.bracket_team-school {
+			text-align: right;
+			margin: 0 35px 0 20px;
+		}
+		.bracket_team-score {
+			left: 0;
+			right: auto;
+			text-align: right;
+			color: @dark_right_team_score_color;
+		}
+	}
+	
+
+	.bracket_game:after {
+		position: absolute;
+		z-index: 5;
+		content: "";
+		display: block;
+	}
+	._game_sixteen {
+		.bracket_game:after {
+			border: 2px dashed #837F7D;
+			border-left: 0;
+			height: ( @dark_bracket_team_default_height * 2 ) + ( @dark_bracket_team_default_margin_bottom * 2 );
+			width: @dark_bracket_col_default_width - ( @dark_bracket_col_default_padd * 3 );
+			left: ( @dark_bracket_col_default_width * 2 ) + ( @dark_bracket_col_default_padd * 1.5 );
+		}
+		.bracket_game:first-child:after {
+			top: ( @dark_bracket_team_default_height * 2 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 1.3 );
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @dark_bracket_team_default_height * 6 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 5.6 );
+		}
+		.bracket_game:nth-child(3):after {
+			top: ( @dark_bracket_team_default_height * 14 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 13.3 );
+		}
+		.bracket_game:nth-child(4):after {
+			top: ( @dark_bracket_team_default_height * 18 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 18 );
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @dark_bracket_col_default_width * 2 ) + ( @dark_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 2px dashed #837F7D;
+				border-right: 0;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	._game_quarter {
+		.bracket_game:after {
+			border: 2px dashed #837F7D;
+			border-left: 0;
+			height: ( @dark_bracket_team_default_height * 5 ) + ( @dark_bracket_team_default_margin_bottom * 5 );
+			width: @dark_bracket_col_default_width - ( @dark_bracket_col_default_padd * 3 ) - @dark_neg_margin;
+			left: ( @dark_bracket_col_default_width * 3 ) + ( @dark_bracket_col_default_padd * 1.5 );
+		}
+		.bracket_game:first-child:after {
+			top: ( @dark_bracket_team_default_height * 5 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 4.6 );
+		}
+		.bracket_game:nth-child(2):after {
+			top: ( @dark_bracket_team_default_height * 12 ) + @dark_container_pad_v + ( @dark_bracket_team_default_margin_bottom * 11.6 );
+		}
+
+		.bracket_game:nth-child(even):after {
+			border-top: 0;
+		}
+		.bracket_game:nth-child(odd):after {
+			border-bottom: 0;
+		}
+
+		&._left_side {
+			.bracket_game:after {
+				right: ( @dark_bracket_col_default_width * 3 ) + ( @dark_bracket_col_default_padd * 1.5 );
+				left: auto;
+				border: 2px dashed #837F7D;
+				border-right: 0;
+			}
+			.bracket_game:nth-child(even):after {
+				border-top: 0;
+			}
+			.bracket_game:nth-child(odd):after {
+				border-bottom: 0;
+			}
+		}
+	}
+	.logo {
+		width: 253px;
+		height: 126px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -126px;
+		top: 5px;
+		z-index: 5;
+		background: transparent url(../img/layout/dark/logo.png) no-repeat center center;
+		background-size: auto 100%;
+	}
+
+	._game_quarter:after {
+		content: "";
+		display: block;
+		background: transparent url(../img/layout/dark/south.png) no-repeat right center;
+		top: 50%;
+		position: absolute;
+		width: @dark_bracket_col_default_width * 1.5;
+		height: @dark_bracket_team_default_height * 4;
+		margin-top: -( ( @dark_bracket_team_default_height * 2 ) + ( @dark_container_pad_b / 2 ) - ( @dark_container_pad_v / 2 ) );
+		left: @dark_bracket_col_default_width + ( @dark_bracket_col_default_padd *2 );
+	}
+	._game_quarter._left_side:after {
+			left: auto;
+			right: @dark_bracket_col_default_width + ( @dark_bracket_col_default_padd *2 );
+			background: transparent url(../img/layout/dark/west.png) no-repeat left center;
+		}
+}

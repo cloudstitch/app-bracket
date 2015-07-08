@@ -72,4 +72,42 @@ body {
 .light_logo {
 	display: none;
 }
+
+.ncaa_actions {
+	display: none;
+}
 /*_____________ END Global Styles _____________*/
+
+/*_____________ Bracket view Styles _____________*/
+.wrapper {
+
+	&.bracket_1 {
+
+	}
+	&.bracket_2 {
+		._left_side,
+		.logo,
+		._game_quarter:after,
+		.ncaa_actions {
+			display: none;
+		}
+		#main_container .bracket_holder {
+			background: none;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+	&.bracket_3 {
+		._left_side,
+		.logo,
+		._game_quarter:after,
+		.ncaa_actions {
+			display: none;
+		}
+		#main_container .bracket_holder {
+			background: none;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+}

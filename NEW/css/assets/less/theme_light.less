@@ -21,7 +21,7 @@
 @light_right_team_score_color: #45AC71;
 
 @light_bracket_col_default_width: 130px;
-@light_bracket_col_default_padd: 20px;
+@light_bracket_col_default_padd: 25px;
 
 @light_bracket_team_default_height: 22px;
 @light_bracket_team_default_margin_bottom: 6px;
@@ -41,7 +41,7 @@
 	}
 	
 	.bracket_holder {
-		background: transparent url(../img/layout/light_bg.png) no-repeat center bottom;
+		background: transparent url(../img/layout/light/bg.png) no-repeat center bottom;
 		padding: @light_container_pad_v @light_container_pad_h;
 	}
 
@@ -83,7 +83,7 @@
 			}
 
 			.bracket_team._winner:after {
-				background: transparent url(../img/layout/light_final_winner.png) no-repeat 0 0;
+				background: transparent url(../img/layout/light/final_winner.png) no-repeat 0 0;
 				right: 23px;
 			}
 		}
@@ -110,12 +110,13 @@
 			content: "";
 			width: 19px;
 			height: 18px;
-			background: transparent url(../img/layout/light_winner.png) no-repeat 0 0;
+			background: transparent url(../img/layout/light/winner.png) no-repeat 0 0;
 			display: block;
 			position: absolute;
-			top: 2px;
+			top: 50%;
 			right: -23px;
 			z-index: 5;
+			margin-top: -9px;
 		}
 	}
 	.bracket_team-seat {
@@ -268,7 +269,7 @@
 			}
 		}
 	}
-	.light_logo {
+	.logo {
 		width: 253px;
 		height: 126px;
 		display: block;
@@ -277,12 +278,13 @@
 		margin-left: -126px;
 		top: 5px;
 		z-index: 5;
+		background: transparent url(../img/layout/light/logo.png) no-repeat center center;
 	}
 
 	._game_quarter:after {
 		content: "";
 		display: block;
-		background: transparent url(../img/layout/light_south.png) no-repeat right center;
+		background: transparent url(../img/layout/light/south.png) no-repeat right center;
 		top: 50%;
 		position: absolute;
 		width: @light_bracket_col_default_width * 1.5;
@@ -293,6 +295,6 @@
 	._game_quarter._left_side:after {
 			left: auto;
 			right: @light_bracket_col_default_width + ( @light_bracket_col_default_padd *2 );
-			background: transparent url(../img/layout/light_west.png) no-repeat left center;
+			background: transparent url(../img/layout/light/west.png) no-repeat left center;
 		}
 }
